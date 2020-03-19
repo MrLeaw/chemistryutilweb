@@ -1,0 +1,131 @@
+<main [ngClass]="theme">
+  <h1>Info</h1>
+  <p>
+    {{ langData.infoTop }}
+  </p>
+  <br />
+  <h1>{{ langData.credits }}</h1>
+  <p></p>
+  <table>
+    <tr>
+      <td class="cap bld gry">Framework</td>
+      <td>
+        <span *ngIf="!mobile">Angular</span>
+        <a href="https://angular.io/" *ngIf="mobile">Angular</a>
+      </td>
+      <td *ngIf="!mobile">
+        <a href="https://angular.io/">https://angular.io/</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="cap bld gry">{{ langData.language }}</td>
+      <td>
+        <span *ngIf="!mobile">TypeScript</span>
+        <a href="https://www.typescriptlang.org/" *ngIf="mobile">TypeScript</a>
+      </td>
+      <td *ngIf="!mobile">
+        <a href="https://www.typescriptlang.org/"
+          >https://www.typescriptlang.org/</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <td class="cap bld gry">Icons</td>
+      <td>
+        <span *ngIf="!mobile">FontAwesome</span>
+        <a href="https://fontawesome.com/" *ngIf="mobile">FontAwesome</a>
+      </td>
+      <td *ngIf="!mobile">
+        <a href="https://fontawesome.com/">https://fontawesome.com/</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="cap bld gry">{{ langData.designConcept }}</td>
+      <td>
+        <span *ngIf="!mobile">Fireship</span>
+        <a href="https://fireship.io/" *ngIf="mobile">Fireship</a>
+      </td>
+      <td *ngIf="!mobile">
+        <a href="https://fireship.io/">https://fireship.io/</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="cap bld gry">{{ langData.font }}</td>
+      <td>
+        <span *ngIf="!mobile">Oxanium</span>
+        <a href="https://fonts.google.com/specimen/Oxanium" *ngIf="mobile"
+          >Oxanium</a
+        >
+      </td>
+      <td *ngIf="!mobile">
+        <a href="https://fonts.google.com/specimen/Oxanium"
+          >https://fonts.google.com/specimen/Oxanium</a
+        >
+      </td>
+    </tr>
+    <tr *ngIf="theme == 'space' || theme == 'love'">
+      <td class="cap bld gry">{{ langData.particles }}</td>
+      <td>
+        <span *ngIf="!mobile">Angular Particle</span>
+        <a href="https://www.npmjs.com/package/angular-particle" *ngIf="mobile"
+          >Angular Particle</a
+        >
+      </td>
+      <td *ngIf="!mobile">
+        <a href="https://www.npmjs.com/package/angular-particle"
+          >https://www.npmjs.com/package/angular-particle</a
+        >
+      </td>
+    </tr>
+    <tr *ngIf="theme == 'space' || theme == 'love'">
+      <td></td>
+      <td>
+        <span *ngIf="!mobile">Particles JS</span>
+        <a href="https://github.com/VincentGarreau/particles.js/" *ngIf="mobile"
+          >Particles JS</a
+        >
+      </td>
+      <td *ngIf="!mobile">
+        <a href="https://github.com/VincentGarreau/particles.js/"
+          >https://github.com/VincentGarreau/particles.js/</a
+        >
+      </td>
+    </tr>
+  </table>
+
+  <br />
+  <h1>{{ langData.settings }}</h1>
+  {{ langData.language }}
+  <select
+    [(ngModel)]="language"
+    (ngModelChange)="langChange()"
+    [ngClass]="theme"
+    name="language"
+    id="language"
+  >
+    <option value="en">English</option>
+    <option value="de">Deutsch</option>
+  </select>
+  <br /><br />
+  {{ langData.theme }}
+  <select
+    [(ngModel)]="theme"
+    (ngModelChange)="darkModeChange()"
+    [ngClass]="theme"
+    name="darkMode"
+    id="darkMode"
+  >
+    <optgroup label="{{ langData.dark }}"
+      ><option value="dark"> {{ langData.dark }} </option>
+      <option value="blue"> {{ langData.blue }} </option
+      ><option value="green">{{ langData.green }}</option>
+      <option value="black">{{ langData.black }}</option>
+      <option value="space">{{ langData.space }}</option></optgroup
+    ><optgroup label="{{ langData.light }}">
+      <option value="light">{{ langData.light }}</option>
+      <option value="bisque">{{ langData.bisque }}</option
+      ><option value="love">{{ langData.love }}</option>
+      <option value="red">{{ langData.red }}</option></optgroup
+    >
+  </select>
+</main>

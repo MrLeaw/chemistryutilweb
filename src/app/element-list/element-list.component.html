@@ -1,0 +1,70 @@
+<main>
+  <h1>{{ langData.elementList }}</h1>
+  <button
+    *ngIf="mobile"
+    (click)="mobile = false"
+    [ngClass]="theme"
+    style="width: 160px;"
+  >
+    View more details
+  </button>
+  <table>
+    <thead>
+      <tr style="font-weight: bold;">
+        <td *ngIf="!mobile" style="padding: 5px 15px">
+          {{ langData.atomicNumber }}
+        </td>
+        <td *ngIf="mobile" style="padding: 5px 15px">
+          #
+        </td>
+        <td style="padding: 5px 15px">{{ langData.symbol }}</td>
+        <td style="padding: 5px 15px">{{ langData.name }}</td>
+        <td style="padding: 5px 15px">{{ langData.molarMass }}</td>
+        <td *ngIf="!mobile" style="padding: 5px 15px">
+          {{ langData.electronegativity }}
+        </td>
+        <td *ngIf="!mobile" style="padding: 5px 15px">
+          {{ langData.nucleonNumber }}
+        </td>
+        <td *ngIf="!mobile" style="padding: 5px 15px">
+          {{ langData.density }}
+        </td>
+        <td *ngIf="!mobile" style="padding: 5px 15px">
+          {{ langData.meltingPoint }}
+        </td>
+        <td *ngIf="!mobile" style="padding: 5px 15px">
+          {{ langData.boilingPoint }}
+        </td>
+        <td *ngIf="!mobile" style="padding: 5px 15px">{{ langData.state }}</td>
+      </tr>
+    </thead>
+    <tbody id="datatable">
+      <tr *ngFor="let item of data">
+        <td style="padding: 5px 15px">{{ item.ordnungszahl }}</td>
+        <td style="padding: 5px 15px">{{ item.symbol }}</td>
+        <td style="padding: 5px 15px">{{ item.name }}</td>
+        <td style="padding: 5px 15px">{{ item.molareMasse }}</td>
+        <td *ngIf="!mobile" style="padding: 5px 15px">
+          {{
+            item.elektronegativitaet != null ? item.elektronegativitaet : "-"
+          }}
+        </td>
+        <td *ngIf="!mobile" style="padding: 5px 15px">
+          {{ item.nukleonenAnzahl }}
+        </td>
+        <td *ngIf="!mobile" style="padding: 5px 15px">{{ item.dichte }}</td>
+        <td *ngIf="!mobile" style="padding: 5px 15px">
+          {{ item.schmelzpunkt != null ? item.schmelzpunkt : "-" }}
+        </td>
+        <td *ngIf="!mobile" style="padding: 5px 15px">
+          {{ item.siedepunkt != null ? item.siedepunkt : "-" }}
+        </td>
+        <td *ngIf="!mobile" style="padding: 5px 15px">
+          {{ item.state == 0 ? langData.solid : ""
+          }}{{ item.state == 1 ? langData.liquid : ""
+          }}{{ item.state == 2 ? langData.gas : "" }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</main>

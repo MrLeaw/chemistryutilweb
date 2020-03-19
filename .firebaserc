@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "chemistryutil": {
+      "hosting": {
+        "ChemistryUtil": [
+          "chemistryutil"
+        ]
+      }
+    }
+  }
+}
