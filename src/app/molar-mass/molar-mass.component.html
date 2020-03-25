@@ -6,17 +6,21 @@
       {{ langData.molarMassHint2 }}
     </i>
   </p>
-  <input
-    type="text"
-    id="input"
-    [(ngModel)]="input"
-    placeholder="{{ langData.enterMoleculeHere }}"
+  <mat-form-field style="width: 300px;">
+    <mat-label>{{ langData.enterMoleculeHere }}</mat-label>
+    <input type="text" matInput [(ngModel)]="input" placeholder="C6H12O6" />
+  </mat-form-field>
+  <button
+    mat-raised-button
+    color="primary"
+    style="margin-left: 10px"
     [ngClass]="theme"
-  />
-  <button [ngClass]="theme" id="button" (click)="startButtonClick()">
+    id="button"
+    (click)="startButtonClick()"
+  >
     {{ langData.go }}
   </button>
-  <br /><br />
+  <br />
   {{ output }}
   <div *ngIf="error != null" class="darkbg"></div>
   <div *ngIf="error != null" class="alert" [ngClass]="theme">
