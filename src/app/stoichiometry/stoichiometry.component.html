@@ -6,58 +6,50 @@
       <br />{{ langData.stoichiometryHint2 }}
     </i>
   </p>
-  <mat-form-field style="width: 300px;">
-    <mat-label>{{ langData.substance1 }}</mat-label>
-    <input type="text" matInput [(ngModel)]="substance1" placeholder="Zn" />
-  </mat-form-field>
-  <mat-form-field style="width: 300px; margin-left: 10px;">
-    <mat-label>{{ langData.mass1 }}</mat-label>
-    <input
-      type="number"
-      min="0"
-      matInput
-      [(ngModel)]="mass1"
-      placeholder="200"
-    /> </mat-form-field
-  ><mat-form-field style="width: 300px; margin-left: 10px;">
-    <mat-label>{{ langData.amount1 }}</mat-label>
-    <input
-      type="number"
-      min="0"
-      matInput
-      [(ngModel)]="amount1"
-      placeholder="1"
-    />
-  </mat-form-field>
-
+  <input
+    type="text"
+    id="substance1Input"
+    [(ngModel)]="substance1"
+    placeholder="{{ langData.substance1 }}"
+    [ngClass]="theme"
+  /><input
+    type="number"
+    min="0"
+    id="mass1Input"
+    [(ngModel)]="mass1"
+    placeholder="{{ langData.mass1 }}"
+    [ngClass]="theme"
+  /><input
+    type="number"
+    min="0"
+    id="amount1Input"
+    [(ngModel)]="amount1"
+    placeholder="{{ langData.amount1 }}"
+    [ngClass]="theme"
+  />
   <br />
-  <mat-form-field style="width: 300px;">
-    <mat-label>{{ langData.substance2 }}</mat-label>
-    <input type="text" matInput [(ngModel)]="substance2" placeholder="ZnS" />
-  </mat-form-field>
-  <mat-form-field style="width: 300px; margin-left: 10px;">
-    <mat-label>{{ langData.mass2 }}</mat-label>
-    <input
-      type="number"
-      min="0"
-      matInput
-      [(ngModel)]="mass2"
-      placeholder="298"
-    />
-  </mat-form-field>
-  <mat-form-field style="width: 300px; margin-left: 10px;">
-    <mat-label>{{ langData.amount2 }}</mat-label>
-    <input
-      type="number"
-      min="0"
-      matInput
-      [(ngModel)]="amount2"
-      placeholder="1"
-    />
-  </mat-form-field>
-  <br /><button
-    mat-raised-button
-    color="primary"
+  <input
+    type="text"
+    id="substance2Iput"
+    [(ngModel)]="substance2"
+    placeholder="{{ langData.substance2 }}"
+    [ngClass]="theme"
+  /><input
+    min="0"
+    type="number"
+    id="mass2Input"
+    [(ngModel)]="mass2"
+    placeholder="{{ langData.mass2 }}"
+    [ngClass]="theme"
+  /><input
+    min="0"
+    type="number"
+    id="amount2Input"
+    [(ngModel)]="amount2"
+    placeholder="{{ langData.amount2 }}"
+    [ngClass]="theme"
+  />
+  <br /><br /><button
     [ngClass]="theme"
     id="button"
     (click)="startButtonClick()"

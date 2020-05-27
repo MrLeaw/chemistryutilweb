@@ -40,6 +40,16 @@
       </td>
     </tr>
     <tr>
+      <td class="cap bld gry">{{ langData.designConcept }}</td>
+      <td>
+        <span *ngIf="!mobile">Fireship</span>
+        <a href="https://fireship.io/" *ngIf="mobile">Fireship</a>
+      </td>
+      <td *ngIf="!mobile">
+        <a href="https://fireship.io/">https://fireship.io/</a>
+      </td>
+    </tr>
+    <tr>
       <td class="cap bld gry">{{ langData.font }}</td>
       <td>
         <span *ngIf="!mobile">Oxanium</span>
@@ -85,36 +95,37 @@
 
   <br />
   <h1>{{ langData.settings }}</h1>
-
-  <mat-form-field>
-    <mat-label>{{ langData.language }}</mat-label>
-    <mat-select [(value)]="language" (valueChange)="langChange()">
-      <mat-option value="en"> English </mat-option
-      ><mat-option value="de">
-        Deutsch
-      </mat-option>
-    </mat-select> </mat-form-field
-  ><br />
-  <mat-form-field>
-    <mat-label>{{ langData.theme }}</mat-label>
-    <mat-select [(value)]="theme" (valueChange)="darkModeChange()">
-      <mat-optgroup [label]="langData.dark">
-        <mat-option value="dark"> {{ langData.dark }} </mat-option>
-        <mat-option value="blue"> {{ langData.blue }} </mat-option>
-        <mat-option value="green">{{ langData.green }}</mat-option>
-        <mat-option value="black">{{ langData.black }}</mat-option>
-        <mat-option value="space">{{
-          langData.space
-        }}</mat-option> </mat-optgroup
-      ><mat-optgroup [label]="langData.light">
-        <mat-option disabled value="light"> {{ langData.light }} </mat-option>
-        <mat-option disabled value="bisque"> {{ langData.bisque }} </mat-option>
-        <mat-option disabled value="love">{{ langData.love }}</mat-option>
-        <mat-option disabled value="red">{{ langData.red }}</mat-option>
-      </mat-optgroup>
-    </mat-select>
-  </mat-form-field>
-  <br />
-  The light themes are temporarely disabled because they aren't optimized for
-  the new user interface yet.
+  {{ langData.language }}
+  <select
+    [(ngModel)]="language"
+    (ngModelChange)="langChange()"
+    [ngClass]="theme"
+    name="language"
+    id="language"
+  >
+    <option value="en">English</option>
+    <option value="de">Deutsch</option>
+  </select>
+  <br /><br />
+  {{ langData.theme }}
+  <select
+    [(ngModel)]="theme"
+    (ngModelChange)="darkModeChange()"
+    [ngClass]="theme"
+    name="darkMode"
+    id="darkMode"
+  >
+    <optgroup label="{{ langData.dark }}"
+      ><option value="dark"> {{ langData.dark }} </option>
+      <option value="blue"> {{ langData.blue }} </option
+      ><option value="green">{{ langData.green }}</option>
+      <option value="black">{{ langData.black }}</option>
+      <option value="space">{{ langData.space }}</option></optgroup
+    ><optgroup label="{{ langData.light }}">
+      <option value="light">{{ langData.light }}</option>
+      <option value="bisque">{{ langData.bisque }}</option
+      ><option value="love">{{ langData.love }}</option>
+      <option value="red">{{ langData.red }}</option></optgroup
+    >
+  </select>
 </main>

@@ -9,25 +9,20 @@
       {{ langData.formulaBalancerHint4 }}
     </i>
   </p>
-  <mat-form-field style="width: 300px;" class="example-full-width">
-    <mat-label>{{ langData.enterFormulaHere }}</mat-label>
-    <input matInput [(ngModel)]="input" placeholder="CH4+O2=CO2+H2O" />
-  </mat-form-field>
-  <button
-    style="margin-left: 10px;"
-    mat-raised-button
-    color="primary"
+  <input
+    type="text"
+    id="input"
+    [(ngModel)]="input"
+    placeholder="{{ langData.enterFormulaHere }}"
     [ngClass]="theme"
-    id="button"
-    (click)="startButtonClick()"
-  >
+  />
+  <button [ngClass]="theme" id="button" (click)="startButtonClick()">
     {{ langData.go }}
   </button>
   <button
-    mat-button
     [ngClass]="theme"
     (click)="showDebug = !showDebug"
-    style="position: absolute; bottom: 0; right: 0"
+    style="width: 100px; position: absolute; bottom: 0; right: 0"
   >
     <span *ngIf="showDebug">Hide</span
     ><span *ngIf="!showDebug">Show</span> Debug
