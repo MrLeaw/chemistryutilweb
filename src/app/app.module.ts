@@ -27,21 +27,19 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     MolarMassComponent,
     InfoComponent,
     StoichiometryComponent,
-    HelpComponent
+    HelpComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ParticlesModule,
-    MatButtonModule,
-    MatInputModule,
     FormsModule,
     ServiceWorkerModule.register("ngsw-worker.js", {
-      enabled: environment.production
+      enabled: environment.production,
     }),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
