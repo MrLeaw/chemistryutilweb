@@ -14,7 +14,7 @@
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 480 512"
           class="svg-inline--fa fa-vial fa-w-15"
-          style="--fa-secondary-opacity:0.1;"
+          style="--fa-secondary-opacity: 0.1;"
         >
           <g class="fa-group">
             <path
@@ -42,7 +42,7 @@
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 448 512"
           class="svg-inline--fa fa-equals fa-w-14"
-          style="--fa-secondary-opacity:0.1;"
+          style="--fa-secondary-opacity: 0.1;"
         >
           <g class="fa-group">
             <path
@@ -74,7 +74,7 @@
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 448 512"
           class="svg-inline--fa fa-atom fa-w-14"
-          style="--fa-secondary-opacity:0.1;"
+          style="--fa-secondary-opacity: 0.1;"
         >
           <g class="fa-group">
             <path
@@ -106,7 +106,7 @@
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 448 512"
           class="svg-inline--fa fa-calculator fa-w-14"
-          style="--fa-secondary-opacity:0.1;"
+          style="--fa-secondary-opacity: 0.1;"
         >
           <g class="fa-group">
             <path
@@ -138,7 +138,7 @@
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
           class="svg-inline--fa fa-weight-hanging fa-w-16"
-          style="--fa-secondary-opacity:0.1;"
+          style="--fa-secondary-opacity: 0.1;"
         >
           <g class="fa-group">
             <path
@@ -158,6 +158,37 @@
         </span>
       </a>
     </li>
+    <li class="nav-item">
+      <a routerLink="units/" class="nav-link" [ngClass]="theme">
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fad"
+          data-icon="ruler-horizontal"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 576 512"
+          class="svg-inline--fa fa-ruler-horizontal fa-w-18"
+          style="--fa-secondary-opacity: 0.1;"
+        >
+          <g class="fa-group">
+            <path
+              fill="currentColor"
+              d="M576 160v192a32 32 0 0 1-32 32H32a32 32 0 0 1-32-32V160a32 32 0 0 1 32-32h48v88a8 8 0 0 0 8 8h16a8 8 0 0 0 8-8v-88h64v88a8 8 0 0 0 8 8h16a8 8 0 0 0 8-8v-88h64v88a8 8 0 0 0 8 8h16a8 8 0 0 0 8-8v-88h64v88a8 8 0 0 0 8 8h16a8 8 0 0 0 8-8v-88h64v88a8 8 0 0 0 8 8h16a8 8 0 0 0 8-8v-88h48a32 32 0 0 1 32 32z"
+              class="fa-secondary"
+            ></path>
+            <path
+              fill="currentColor"
+              d="M176 216a8 8 0 0 0 8 8h16a8 8 0 0 0 8-8v-88h-32zm-96 0a8 8 0 0 0 8 8h16a8 8 0 0 0 8-8v-88H80zm192 0a8 8 0 0 0 8 8h16a8 8 0 0 0 8-8v-88h-32zm192-88v88a8 8 0 0 0 8 8h16a8 8 0 0 0 8-8v-88zm-96 88a8 8 0 0 0 8 8h16a8 8 0 0 0 8-8v-88h-32z"
+              class="fa-primary"
+            ></path>
+          </g>
+        </svg>
+        <span class="link-text">
+          {{ langData != undefined ? langData.unitsTitle : "" }}
+        </span>
+      </a>
+    </li>
     <li class="nav-item" id="infoButton">
       <a routerLink="info/" class="nav-link" [ngClass]="theme">
         <svg
@@ -169,7 +200,7 @@
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 192 512"
           class="svg-inline--fa fa-info fa-w-6"
-          style="--fa-secondary-opacity:0.1;"
+          style="--fa-secondary-opacity: 0.1;"
         >
           <g class="fa-group">
             <path
@@ -196,13 +227,6 @@
   [width]="width"
   [height]="height"
   [params]="myParams"
-></particles>
-<particles
-  *ngIf="theme == 'love'"
-  [style]="myStyle"
-  [width]="width"
-  [height]="height"
-  [params]="myParams2"
 ></particles>
 
 <router-outlet></router-outlet>

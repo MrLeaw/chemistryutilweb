@@ -1,18 +1,18 @@
 export enum Case {
   Lowercase = 0,
-  Uppercase
+  Uppercase,
 }
 
 export enum State {
   MoleculeAmount = 0,
   AtomAmount,
-  AtomName
+  AtomName,
 }
 
 export enum ElementState {
   solid = 0,
   liquid,
-  gas
+  gas,
 }
 
 export class Atom {
@@ -49,5 +49,5 @@ export enum StochiometrieField {
   Mass1,
   Mass2,
   Amount1,
-  Amount2
+  Amount2,
 }

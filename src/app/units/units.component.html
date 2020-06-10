@@ -1,0 +1,50 @@
+<main>
+  <h1>{{ langData.unitsTitle }}</h1>
+  <select
+    [(ngModel)]="currentCategory"
+    (ngModelChange)="categoryChange()"
+    [ngClass]="theme"
+  >
+    <option *ngFor="let category of categories" value="{{ category }}">{{
+      category
+    }}</option>
+  </select>
+  <br /><br />
+  <input
+    type="text"
+    (keyup)="calculate()"
+    [ngClass]="theme"
+    [(ngModel)]="input"
+    name=""
+    id=""
+  />
+  <select
+    style="margin-left: 20px;"
+    (change)="calculate()"
+    [(ngModel)]="startUnit"
+    [ngClass]="theme"
+  >
+    <option *ngFor="let unit of currentUnits" value="{{ unit.Name }}">{{
+      unit.Name
+    }}</option>
+  </select>
+  <br /><br />
+  <input
+    type="text"
+    disabled
+    [(ngModel)]="result"
+    style="background-color: transparent; border: none; box-shadow: none;"
+    name=""
+    id=""
+  />
+  <select
+    style="margin-left: 20px;"
+    (change)="calculate()"
+    [(ngModel)]="endUnit"
+    [ngClass]="theme"
+  >
+    <option *ngFor="let unit of currentUnits" value="{{ unit.Name }}">{{
+      unit.Name
+    }}</option>
+  </select>
+</main>

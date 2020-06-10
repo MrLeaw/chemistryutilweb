@@ -1,8 +1,5 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-import { MatButtonModule } from "@angular/material/button";
-import { MatInputModule } from "@angular/material/input";
-
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { FormulaBalancerComponent } from "./formula-balancer/formula-balancer.component";
@@ -17,6 +14,7 @@ import { environment } from "../environments/environment";
 import { HelpComponent } from "./help/help.component";
 import { ParticlesModule } from "angular-particle";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { UnitsComponent } from "./units/units.component";
 
 @NgModule({
   declarations: [
@@ -28,6 +26,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     InfoComponent,
     StoichiometryComponent,
     HelpComponent,
+    UnitsComponent,
   ],
   imports: [
     BrowserModule,

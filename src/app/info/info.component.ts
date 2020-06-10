@@ -5,7 +5,7 @@ import { LANGDATA } from "../langdata";
 @Component({
   selector: "app-info",
   templateUrl: "./info.component.html",
-  styleUrls: ["./info.component.css"]
+  styleUrls: ["./info.component.css"],
 })
 export class InfoComponent implements OnInit {
   constructor(private sharedDataService: SharedDataService) {}
@@ -48,9 +48,8 @@ export class InfoComponent implements OnInit {
       "green",
       "red",
       "space",
-      "love"
     ];
-    themes = themes.filter(e => e !== this.theme);
+    themes = themes.filter((e) => e !== this.theme);
 
     let elements = document.getElementsByClassName(".nav-link");
     document.querySelector("body").classList.add(this.theme);

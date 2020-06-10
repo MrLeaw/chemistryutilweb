@@ -57,7 +57,7 @@ export let LANGDATA = {
     font: "Schriftart",
     space: "Weltraum",
     particles: "Partikel",
-    love: "Liebe"
+    unitsTitle: "Einheitenumrechner",
   },
   en: {
     infoTop: "This project was realized by Felix Neumann and Emil Hausmann.",
@@ -114,6 +114,6 @@ export let LANGDATA = {
     font: "Font",
     space: "Space",
     particles: "Particles",
-    love: "Love"
-  }
+    unitsTitle: "Unit converter",
+  },
 };

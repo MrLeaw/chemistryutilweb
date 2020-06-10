@@ -63,7 +63,7 @@
         >
       </td>
     </tr>
-    <tr *ngIf="theme == 'space' || theme == 'love'">
+    <tr *ngIf="theme == 'space'">
       <td class="cap bld gry">{{ langData.particles }}</td>
       <td>
         <span *ngIf="!mobile">Angular Particle</span>
@@ -77,7 +77,7 @@
         >
       </td>
     </tr>
-    <tr *ngIf="theme == 'space' || theme == 'love'">
+    <tr *ngIf="theme == 'space'">
       <td></td>
       <td>
         <span *ngIf="!mobile">Particles JS</span>
@@ -123,8 +123,7 @@
       <option value="space">{{ langData.space }}</option></optgroup
     ><optgroup label="{{ langData.light }}">
       <option value="light">{{ langData.light }}</option>
-      <option value="bisque">{{ langData.bisque }}</option
-      ><option value="love">{{ langData.love }}</option>
+      <option value="bisque">{{ langData.bisque }}</option>
       <option value="red">{{ langData.red }}</option></optgroup
     >
   </select>

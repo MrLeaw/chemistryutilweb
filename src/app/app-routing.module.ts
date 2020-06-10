@@ -7,6 +7,7 @@ import { MolarMassComponent } from "./molar-mass/molar-mass.component";
 import { InfoComponent } from "./info/info.component";
 import { StoichiometryComponent } from "./stoichiometry/stoichiometry.component";
 import { HelpComponent } from "./help/help.component";
+import { UnitsComponent } from "./units/units.component";
 
 const routes: Routes = [
   { path: "formulaBalancer", component: FormulaBalancerComponent },
@@ -15,11 +16,12 @@ const routes: Routes = [
   { path: "molarMass", component: MolarMassComponent },
   { path: "stoichiometry", component: StoichiometryComponent },
   { path: "", component: DashboardComponent },
-  { path: "help", component: HelpComponent }
+  { path: "help", component: HelpComponent },
+  { path: "units", component: UnitsComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}
