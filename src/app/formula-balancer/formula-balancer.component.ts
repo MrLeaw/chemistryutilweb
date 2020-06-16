@@ -8,7 +8,7 @@ import { LANGDATA } from "../langdata";
 @Component({
   selector: "app-formula-balancer",
   templateUrl: "./formula-balancer.component.html",
-  styleUrls: ["./formula-balancer.component.css"]
+  styleUrls: ["./formula-balancer.component.css"],
 })
 export class FormulaBalancerComponent implements OnInit {
   constructor(private sharedDataService: SharedDataService) {}
@@ -72,7 +72,7 @@ export class FormulaBalancerComponent implements OnInit {
       "w",
       "x",
       "y",
-      "z"
+      "z",
     ];
     let uppercaseLetters = [
       "A",
@@ -100,7 +100,7 @@ export class FormulaBalancerComponent implements OnInit {
       "W",
       "X",
       "Y",
-      "Z"
+      "Z",
     ];
     for (var i = 0; i < 26; i++) {
       if (casetocheck == Case.Lowercase) {
@@ -285,7 +285,7 @@ export class FormulaBalancerComponent implements OnInit {
             if (contains) {
               arr.push({
                 priority: reaction.reactants[j].atoms.length,
-                molecule: reaction.reactants[j]
+                molecule: reaction.reactants[j],
               });
             }
           }
@@ -329,7 +329,7 @@ export class FormulaBalancerComponent implements OnInit {
             if (contains) {
               arr.push({
                 priority: reaction.products[j].atoms.length,
-                molecule: reaction.products[j]
+                molecule: reaction.products[j],
               });
             }
           }
@@ -400,7 +400,7 @@ export class FormulaBalancerComponent implements OnInit {
       this.error = "Das Eingabefeld darf nicht leer sein.";
       return;
     }
-    this.balancedFormula = this.balanceFormula(value);
+    this.balancedFormula = this.balanceFormula(value.replace(/ /g, ""));
   }
   removeError() {
     this.error = null;
