@@ -58,6 +58,9 @@ export let LANGDATA = {
     space: "Weltraum",
     particles: "Partikel",
     unitsTitle: "Einheitenumrechner",
+    help: "Hilfe",
+    websiteHelp: "Website Hilfe",
+    delphiHelp: "Delphi Hilfe",
   },
   en: {
     infoTop: "This project was realized by Felix Neumann and Emil Hausmann.",
@@ -115,5 +118,8 @@ export let LANGDATA = {
     space: "Space",
     particles: "Particles",
     unitsTitle: "Unit converter",
+    help: "Help",
+    websiteHelp: "Website Help",
+    delphiHelp: "Delphi Help",
   },
 };

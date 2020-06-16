@@ -1,13 +1,13 @@
 import { Component, OnInit } from "@angular/core";
-import { SharedDataService } from "../shared-data.service";
 import { LANGDATA } from "../langdata";
+import { SharedDataService } from "../shared-data.service";
 
 @Component({
-  selector: "app-help",
-  templateUrl: "./help.component.html",
-  styleUrls: ["./help.component.css"],
+  selector: "app-webhelp",
+  templateUrl: "./webhelp.component.html",
+  styleUrls: ["./webhelp.component.css"],
 })
-export class HelpComponent implements OnInit {
+export class WebhelpComponent implements OnInit {
   mobile = false;
   langData = null;
   language = "en";

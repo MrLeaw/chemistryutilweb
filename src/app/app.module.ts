@@ -15,6 +15,7 @@ import { HelpComponent } from "./help/help.component";
 import { ParticlesModule } from "angular-particle";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { UnitsComponent } from "./units/units.component";
+import { WebhelpComponent } from './webhelp/webhelp.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { UnitsComponent } from "./units/units.component";
     StoichiometryComponent,
     HelpComponent,
     UnitsComponent,
+    WebhelpComponent,
   ],
   imports: [
     BrowserModule,

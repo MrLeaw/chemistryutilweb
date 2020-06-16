@@ -8,6 +8,7 @@ import { InfoComponent } from "./info/info.component";
 import { StoichiometryComponent } from "./stoichiometry/stoichiometry.component";
 import { HelpComponent } from "./help/help.component";
 import { UnitsComponent } from "./units/units.component";
+import { WebhelpComponent } from "./webhelp/webhelp.component";
 
 const routes: Routes = [
   { path: "formulaBalancer", component: FormulaBalancerComponent },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: "stoichiometry", component: StoichiometryComponent },
   { path: "", component: DashboardComponent },
   { path: "help", component: HelpComponent },
+  { path: "webhelp", component: WebhelpComponent },
   { path: "units", component: UnitsComponent },
 ];
 

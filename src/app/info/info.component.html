@@ -127,4 +127,14 @@
       <option value="red">{{ langData.red }}</option></optgroup
     >
   </select>
+  <br /><br />
+  <h1>{{ langData.help }}</h1>
+
+  <button routerLink="../webhelp/" [ngClass]="theme" style="width: 150px;">
+    {{ langData.websiteHelp }}
+  </button>
+  <br />
+  <br /><button routerLink="../help/" [ngClass]="theme" style="width: 150px;">
+    {{ langData.delphiHelp }}
+  </button>
 </main>
