@@ -8,7 +8,7 @@ import { LANGDATA } from "../langdata";
 @Component({
   selector: "app-stoichiometry",
   templateUrl: "./stoichiometry.component.html",
-  styleUrls: ["./stoichiometry.component.css"]
+  styleUrls: ["./stoichiometry.component.css"],
 })
 export class StoichiometryComponent implements OnInit {
   constructor(private sharedDataService: SharedDataService) {}
@@ -56,7 +56,7 @@ export class StoichiometryComponent implements OnInit {
       "w",
       "x",
       "y",
-      "z"
+      "z",
     ];
     let uppercaseLetters = [
       "A",
@@ -84,7 +84,7 @@ export class StoichiometryComponent implements OnInit {
       "W",
       "X",
       "Y",
-      "Z"
+      "Z",
     ];
     for (var i = 0; i < 26; i++) {
       if (casetocheck == Case.Lowercase) {
@@ -281,8 +281,13 @@ export class StoichiometryComponent implements OnInit {
       }
     }
     if (errorcode == "multiple empty fields" || emptyField == null) {
-      this.errortitle = "Fehler";
-      this.error = "Es muss genau ein leeres Feld geben.";
+      if (this.language == "de") {
+        this.errortitle = "Fehler";
+        this.error = "Es muss genau ein leeres Feld geben.";
+      } else {
+        this.errortitle = "Error";
+        this.error = "There must be exactly one empty field.";
+      }
       return;
     }
     switch (emptyField) {
@@ -303,8 +308,13 @@ export class StoichiometryComponent implements OnInit {
         break;
       }
       default: {
-        this.errortitle = "Fehler";
-        this.error = "Beide Stoff-Eingabefelder müssen ausgefüllt sein.";
+        if (this.language == "de") {
+          this.errortitle = "Fehler";
+          this.error = "Beide Stoff-Eingabefelder müssen ausgefüllt sein.";
+        } else {
+          this.errortitle = "Error";
+          this.error = "Both substance input fields must be filled out.";
+        }
         return;
       }
     }

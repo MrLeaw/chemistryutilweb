@@ -241,8 +241,13 @@ export class FormulaBalancerComponent implements OnInit {
     );
     let productsElements = this.getElementsFromReactionHalf(reaction.products);
     if (reactantsElements.length != productsElements.length) {
-      this.error = "Auf beiden Seiten müssen die gleichen Atome vorkommen!";
-      this.errortitle = "Fehler";
+      if (this.language == "de") {
+        this.error = "Auf beiden Seiten müssen die gleichen Atome vorkommen!";
+        this.errortitle = "Fehler";
+      } else {
+        this.errortitle = "Error";
+        this.error = "The same atoms must appear on both sides!";
+      }
       return;
     }
     reactantsElements = this.sortAtomArray(reactantsElements);
@@ -256,8 +261,13 @@ export class FormulaBalancerComponent implements OnInit {
       }
     }
     if (!equal) {
-      this.error = "Auf beiden Seiten müssen die gleichen Atome vorkommen!";
-      this.errortitle = "Fehler";
+      if (this.language == "de") {
+        this.error = "Auf beiden Seiten müssen die gleichen Atome vorkommen!";
+        this.errortitle = "Fehler";
+      } else {
+        this.errortitle = "Error";
+        this.error = "The same atoms must appear on both sides!";
+      }
       return;
     }
     let counter = 0;
@@ -265,8 +275,14 @@ export class FormulaBalancerComponent implements OnInit {
       counter++;
       if (counter > 24) {
         console.log(reaction);
-        this.error = "Ausgleichen hat zu lange gedauert! (mind. 25 Versuche) ";
-        this.errortitle = "Fehler";
+        if (this.language == "de") {
+          this.error = "Ausgleichen hat zu lange gedauert! (mind. 25 Versuche)";
+          this.errortitle = "Fehler";
+        } else {
+          this.errortitle = "Error";
+          this.error = "Balancing took too long! (at least 25 attempts)";
+        }
+        return;
         return;
       }
       for (let i = 0; i < reactantsElements.length; i++) {
@@ -396,8 +412,13 @@ export class FormulaBalancerComponent implements OnInit {
 
   outputBalancedFormula(value: string) {
     if (value == undefined || value == null || value == "") {
-      this.errortitle = "Fehler";
-      this.error = "Das Eingabefeld darf nicht leer sein.";
+      if (this.language == "de") {
+        this.errortitle = "Fehler";
+        this.error = "Das Eingabefeld darf nicht leer sein.";
+      } else {
+        this.errortitle = "Error";
+        this.error = "The input field can't be empty.";
+      }
       return;
     }
     this.balancedFormula = this.balanceFormula(value.replace(/ /g, ""));

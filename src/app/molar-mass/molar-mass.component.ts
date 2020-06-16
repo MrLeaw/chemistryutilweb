@@ -7,7 +7,7 @@ import { SharedDataService } from "../shared-data.service";
 @Component({
   selector: "app-molar-mass",
   templateUrl: "./molar-mass.component.html",
-  styleUrls: ["./molar-mass.component.css"]
+  styleUrls: ["./molar-mass.component.css"],
 })
 export class MolarMassComponent implements OnInit {
   constructor(private sharedDataService: SharedDataService) {}
@@ -49,7 +49,7 @@ export class MolarMassComponent implements OnInit {
       "w",
       "x",
       "y",
-      "z"
+      "z",
     ];
     let uppercaseLetters = [
       "A",
@@ -77,7 +77,7 @@ export class MolarMassComponent implements OnInit {
       "W",
       "X",
       "Y",
-      "Z"
+      "Z",
     ];
     for (var i = 0; i < 26; i++) {
       if (casetocheck == Case.Lowercase) {
@@ -180,8 +180,14 @@ export class MolarMassComponent implements OnInit {
           break;
         }
         if (j == this.data.length - 1) {
-          this.error = "Das Molekül enthält ein unbekanntes Element.";
-          this.errortitle = "Fehler";
+          if (this.language == "de") {
+            this.error = "Das Molekül enthält ein unbekanntes Element.";
+            this.errortitle = "Fehler";
+          } else {
+            this.errortitle = "Error";
+            this.error = "The molecule contains an unknown element.";
+          }
+          return;
           return -1;
         }
       }
@@ -191,8 +197,13 @@ export class MolarMassComponent implements OnInit {
 
   outputMolarMass(value: string) {
     if (value == undefined || value == null || value == "") {
-      this.errortitle = "Fehler";
-      this.error = "Das Eingabefeld darf nicht leer sein.";
+      if (this.language == "de") {
+        this.errortitle = "Fehler";
+        this.error = "Das Eingabefeld darf nicht leer sein.";
+      } else {
+        this.errortitle = "Error";
+        this.error = "The input field can't be empty.";
+      }
       return;
     }
     let res = this.getMolecularMass(value);
