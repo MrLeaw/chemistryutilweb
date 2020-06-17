@@ -1,6 +1,6 @@
-import { Component, OnInit } from "@angular/core";
-import { SharedDataService } from "../shared-data.service";
+import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
 import { LANGDATA } from "../langdata";
+import { SharedDataService } from "../shared-data.service";
 
 @Component({
   selector: "app-help",
@@ -14,6 +14,7 @@ export class HelpComponent implements OnInit {
   theme = "dark";
   constructor(private sharedDataService: SharedDataService) {}
 
+  @ViewChild("delhelp", null) delhelp: ElementRef;
   ngOnInit() {
     this.language = this.sharedDataService.getLanguage();
     this.theme = this.sharedDataService.getTheme();
@@ -21,5 +22,6 @@ export class HelpComponent implements OnInit {
     this.mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
       navigator.userAgent
     );
+    this.delhelp.nativeElement.innerHTML = this.langData.delHelp;
   }
 }

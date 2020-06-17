@@ -12,13 +12,13 @@ export class UnitsComponent implements OnInit {
   langData = null;
   language: string;
   theme: string;
-  result: string;
+  result: number;
   units;
   categories: Array<string> = [];
   startUnit;
   endUnit;
   currentUnits: Array<any>;
-  input: string;
+  input: number;
   currentCategory: string;
   constructor(private sharedDataService: SharedDataService) {}
 
@@ -78,7 +78,7 @@ export class UnitsComponent implements OnInit {
     var unit2 = this.getUnitByName(this.endUnit);
     var defaultUnit = this.getDefaultUnitForCategory(this.currentCategory);
 
-    var x: number = parseFloat(this.input.replace(",", "."));
+    var x: number = this.input;
 
     if (!unit1.Standard) {
       x = x - unit1.Add;

@@ -65,6 +65,148 @@ export let LANGDATA = {
     privacy: "Datenschutz",
     copy: "Kopieren",
     impress: "Impressum",
+    webHelp: `
+    <h2>Reaktionsausgleicher</h2>
+    Die Formel der auszugleichenden Reaktion wird in das Eingabefeld eingetragen bzw. kopiert.
+    <br>
+    <br>
+    <img src="assets/images/help/web/1.PNG"> <br><br>
+    Dabei gilt:
+    <ul>
+<li>Alle Stoffe (Edukte und Produkte) müssen als Summenformeln angegeben werden.</li>
+<li>Tiefgestellte Zahlen müssen als „normale“ Zahlen geschrieben werden (sprich: H<sub>2</sub>O → H2O)</li>
+<li>Der Reaktionspfeil, bzw. das Zeichen zur Abtrennung der Edukte und Produkte der Reaktion muss als einfaches = geschrieben werden (sprich: 2H2 + O2 = 2H2O)
+<ul><li>Leerzeichen in der Gleichung sind irrelevant und werden von Programm / Website ignoriert</li></ul></li>
+<li>Klammern dürfen in der Reaktionsgleichung nicht benutzt werden</li>
+    </ul>
+Wenn die Reaktionsgleichung mit den entsprechenden Bedingungen in das Eingabefeld eingetragen wurde, wird der Ausgleichungsprozess mit dem Button „Los“ bzw. der Enter-Taste gestartet. <br>
+    
+    <p><img src="assets/images/help/web/1.PNG"></p><p>Sollte einer der obigen Hinweise nicht beachtet worden sein oder ein anderer Fehler tritt auf, wird das Programm / die Website eine hinweisende Fehlermeldung ausgeben. </p>
+<p>Sollte es keinen Fehler geben, wird die ausgeglichene Reaktionsgleichung ausgegeben und kann durch den Button „Kopieren“ in die Zwischenablage kopiert werden.</p>
+</br>
+    <h2>Liste der Elemente</h2>
+Diese Liste beinhaltet alle bereits bekannten Elemente (Stand: Juni 2020), deren Namen, Symbol und einige wichtige Werte. Dabei ist folgendes zu beachten:
+  
+<ul>
+<li>Die Einheit der Dichte für die verschiedenen Elemente ist vom Aggregatzustand bei 20°C (letzte Spalte der Tabelle) abhängig
+<ul><li>Die Dichte für die Stoffe mit dem Aggregatzustand „fest“ bei 20°C ist in der Einheit g/cm<sup>3</sup> angegeben</li>
+<li>Die Dichte für die Stoffe mit dem Aggregatzustand „flüssig“ und „gasförmig“ bei 20°C ist in der Einheit g/l angegeben</li></ul></li>
+<li>Bei Elementen mit hoher Ordnungszahl (etwa ab Ordnungszahl 95), welche teilweise aufgrund von Instabilität nur für Bruchteile von Sekunden in kleinsten Mengen im Labor erzeugt werden können, fehlen viele Werte, da diese nie ermittelt werden konnten
+<ul><li>Die meisten vorhandenen Werte von Elementen mit hoher Ordnungszahl sind errechnete bzw. theoretisch angenommene Werte</li></ul></li>
+<li>Werte wie die molare Masse aus der Tabelle werden auch in anderen Teilen der Webseite / des Programmes benutzt</li>
+
+
+</ul>
+
+<p>Die meisten Werte wurden, soweit vorhanden, aus der App / Webseite der Merck KGaA, Darmstadt, Deutschland entnommen. Weitere Werte wurden den Wikipedia-Einträgen der jeweiligen Elemente, bzw. der Website chemie.de entnommen.
+</p>
+<p>
+Obwohl lange an der Genauigkeit der Werte in der Tabelle gearbeitet wurde, können trotzdem kleinere Ungenauigkeiten vorhanden sein. 
+</p>
+<p>
+Fällt ihnen eine Ungenauigkeit oder ein falscher Wert auf, bitten wir sie, sich an die Adresse <a href="mailto:chemistryutility@gmail.com">chemistryutility@gmail.com</a> zu wenden, damit der Fehler behoben werden kann. Vielen Dank.
+</p> </br>
+<h2>Stöchiometrie</h2>
+<p>Die Stöchiometrie auf der Website / im Programm erfolgt nach der Grundgleichung  M=m/n. Dabei gilt:</p>
+<ul>
+<li>In die Felder „Stoff 1“ und „Stoff 2“  müssen die Summenformeln der benutzten Stoffe eingetragen werden
+<ul><li>Das Programm / die Website berechnet die molare Masse des Stoffes automatisch mit Werten aus der Tabelle</li></ul></li>
+<li>Alle Felder, bis auf ein Masse-/Stoffmengenfeld müssen ausgefüllt werden, damit das Programm / die Website die Gleichung lösen kann</li> 
+<li>Klammern dürfen nicht benutzt werden</li>
+</ul><p><img src="assets/images/help/web/4.PNG"></p>
+<p>Mit dem Button „Los“ wird die Berechnung gestartet. Sollte einer der obigen Hinweise nicht beachtet worden sein oder ein anderer Fehler tritt auf, wird das Programm / die Website eine hinweisende Fehlermeldung ausgeben.</p>
+<p>Sollte es keinen Fehler geben, wird das vorher frei gelassene Feld mit dem berechneten Wert befüllt.</p>
+<p>Einheiten spielen dabei für die Berechnung keine Rolle, da diese in der gleichen Einheit ausgegeben werden, wie sie eingegeben wurden. (Beispielsweise: 2 Stoffmengen werden, natürlich in mol, eingegeben und eine Masse in g. Da sich in der Berechnung mol1 mit mol2 kürzt, bleibt nur die Einheit der Masse, in diesem Fall g übrig.)</p>
+<br>
+<h2>Molare Masse</h2>
+<p>Die molare Masse-Funktion des Programmes / der Website benutzt die molaren Massen der einzelnen Stoffe aus der Tabelle und addiert diese. Der Stoff mit der auszurechnenden molaren Masse wird in das Eingabefeld eingetragen/kopiert. Dabei gilt:</p>
+<ul>
+<li>Der Stoff muss als Summenformel angegeben werden</li>
+<li>Tiefgestellte Zahlen müssen als „normale“ Zahlen geschrieben werden (sprich:    H<sub>2</sub>O → H2O)</li>
+<li>Klammern dürfen nicht benutzt werden</li>
+
+</ul><p><img src="assets/images/help/web/5.PNG"></p>
+<p>Mit dem Button „Los“ wird die Berechnung der molaren Masse gestartet. Sollte einer der obigen Hinweise nicht beachtet worden sein oder ein anderer Fehler tritt auf, wird das Programm / die Website eine hinweisende Fehlermeldung ausgeben.</p>
+<p>Sollte es keinen Fehler geben, wird die molare Masse des Stoffes in g/mol ausgegeben und kann mit dem Button „Kopieren“ in die Zwischenablage kopiert werden.</p>
+<br>
+<h2>Einheitenumrechnung</h2>
+
+<p>Diese Funktion des Programmes / der Website ermöglicht es, Werte mit für Chemie wichtigen Einheiten in andere Einheiten umzurechnen. Bei dem obersten Auswahlfeld wird die Einheiten-Kategorie ausgewählt. In das Auswahlfeld rechts neben dem Eingabefeld, in das der umzurechnende Wert eingegeben wird, wird die Ausgangseinheit des Wertes ausgewählt. Im untersten Auswahlfeld wird die gewünschte Ausgabeeinheit ausgewählt.</p>
+<p><img src="assets/images/help/web/7.PNG"></p>
+<p>Sollte ein Fehler auftreten so, wird das Programm / die Website eine hinweisende Fehlermeldung ausgeben.</p>
+<p>Sollte es keinen Fehler geben, wird der umgerechnete Wert automatisch ohne das Drücken eines Buttons ausgegeben und kann mit dem Button „Kopieren“ in die Zwischenablage kopiert werden.</p>
+`,
+    delHelp: `
+    <h2>Reaktionsausgleicher</h2>
+    Die Formel der auszugleichenden Reaktion wird in das Eingabefeld eingetragen bzw. kopiert.
+    <br>
+    <br>
+    <img src="assets/images/help/del/1.PNG"> <br><br>
+    Dabei gilt:
+    <ul>
+<li>Alle Stoffe (Edukte und Produkte) müssen als Summenformeln angegeben werden.</li>
+<li>Tiefgestellte Zahlen müssen als „normale“ Zahlen geschrieben werden (sprich: H<sub>2</sub>O → H2O)</li>
+<li>Der Reaktionspfeil, bzw. das Zeichen zur Abtrennung der Edukte und Produkte der Reaktion muss als einfaches = geschrieben werden (sprich: 2H2 + O2 = 2H2O)
+<ul><li>Leerzeichen in der Gleichung sind irrelevant und werden von Programm / Website ignoriert</li></ul></li>
+<li>Klammern dürfen in der Reaktionsgleichung nicht benutzt werden</li>
+    </ul>
+Wenn die Reaktionsgleichung mit den entsprechenden Bedingungen in das Eingabefeld eingetragen wurde, wird der Ausgleichungsprozess mit dem Button „Los“ bzw. der Enter-Taste gestartet. <br>
+    
+    <p><img src="assets/images/help/del/1.PNG"></p><p>Sollte einer der obigen Hinweise nicht beachtet worden sein oder ein anderer Fehler tritt auf, wird das Programm / die Website eine hinweisende Fehlermeldung ausgeben. </p>
+<p>Sollte es keinen Fehler geben, wird die ausgeglichene Reaktionsgleichung ausgegeben und kann durch den Button „Kopieren“ in die Zwischenablage kopiert werden.</p>
+</br>
+    <h2>Liste der Elemente</h2>
+Diese Liste beinhaltet alle bereits bekannten Elemente (Stand: Juni 2020), deren Namen, Symbol und einige wichtige Werte. Dabei ist folgendes zu beachten:
+  
+<ul>
+<li>Die Einheit der Dichte für die verschiedenen Elemente ist vom Aggregatzustand bei 20°C (letzte Spalte der Tabelle) abhängig
+<ul><li>Die Dichte für die Stoffe mit dem Aggregatzustand „fest“ bei 20°C ist in der Einheit g/cm<sup>3</sup> angegeben</li>
+<li>Die Dichte für die Stoffe mit dem Aggregatzustand „flüssig“ und „gasförmig“ bei 20°C ist in der Einheit g/l angegeben</li></ul></li>
+<li>Bei Elementen mit hoher Ordnungszahl (etwa ab Ordnungszahl 95), welche teilweise aufgrund von Instabilität nur für Bruchteile von Sekunden in kleinsten Mengen im Labor erzeugt werden können, fehlen viele Werte, da diese nie ermittelt werden konnten
+<ul><li>Die meisten vorhandenen Werte von Elementen mit hoher Ordnungszahl sind errechnete bzw. theoretisch angenommene Werte</li></ul></li>
+<li>Werte wie die molare Masse aus der Tabelle werden auch in anderen Teilen der Webseite / des Programmes benutzt</li>
+
+
+</ul>
+
+<p>Die meisten Werte wurden, soweit vorhanden, aus der App / Webseite der Merck KGaA, Darmstadt, Deutschland entnommen. Weitere Werte wurden den Wikipedia-Einträgen der jeweiligen Elemente, bzw. der Website chemie.de entnommen.
+</p>
+<p>
+Obwohl lange an der Genauigkeit der Werte in der Tabelle gearbeitet wurde, können trotzdem kleinere Ungenauigkeiten vorhanden sein. 
+</p>
+<p>
+Fällt ihnen eine Ungenauigkeit oder ein falscher Wert auf, bitten wir sie, sich an die Adresse <a href="mailto:chemistryutility@gmail.com">chemistryutility@gmail.com</a> zu wenden, damit der Fehler behoben werden kann. Vielen Dank.
+</p> </br>
+<h2>Stöchiometrie</h2>
+<p>Die Stöchiometrie auf der Website / im Programm erfolgt nach der Grundgleichung  M=m/n. Dabei gilt:</p>
+<ul>
+<li>In die Felder „Stoff 1“ und „Stoff 2“  müssen die Summenformeln der benutzten Stoffe eingetragen werden
+<ul><li>Das Programm / die Website berechnet die molare Masse des Stoffes automatisch mit Werten aus der Tabelle</li></ul></li>
+<li>Alle Felder, bis auf ein Masse-/Stoffmengenfeld müssen ausgefüllt werden, damit das Programm / die Website die Gleichung lösen kann</li> 
+<li>Klammern dürfen nicht benutzt werden</li>
+</ul><p><img src="assets/images/help/del/4.PNG"></p>
+<p>Mit dem Button „Los“ wird die Berechnung gestartet. Sollte einer der obigen Hinweise nicht beachtet worden sein oder ein anderer Fehler tritt auf, wird das Programm / die Website eine hinweisende Fehlermeldung ausgeben.</p>
+<p>Sollte es keinen Fehler geben, wird das vorher frei gelassene Feld mit dem berechneten Wert befüllt.</p>
+<p>Einheiten spielen dabei für die Berechnung keine Rolle, da diese in der gleichen Einheit ausgegeben werden, wie sie eingegeben wurden. (Beispielsweise: 2 Stoffmengen werden, natürlich in mol, eingegeben und eine Masse in g. Da sich in der Berechnung mol1 mit mol2 kürzt, bleibt nur die Einheit der Masse, in diesem Fall g übrig.)</p>
+<br>
+<h2>Molare Masse</h2>
+<p>Die molare Masse-Funktion des Programmes / der Website benutzt die molaren Massen der einzelnen Stoffe aus der Tabelle und addiert diese. Der Stoff mit der auszurechnenden molaren Masse wird in das Eingabefeld eingetragen/kopiert. Dabei gilt:</p>
+<ul>
+<li>Der Stoff muss als Summenformel angegeben werden</li>
+<li>Tiefgestellte Zahlen müssen als „normale“ Zahlen geschrieben werden (sprich:    H<sub>2</sub>O → H2O)</li>
+<li>Klammern dürfen nicht benutzt werden</li>
+
+</ul><p><img src="assets/images/help/del/5.PNG"></p>
+<p>Mit dem Button „Los“ wird die Berechnung der molaren Masse gestartet. Sollte einer der obigen Hinweise nicht beachtet worden sein oder ein anderer Fehler tritt auf, wird das Programm / die Website eine hinweisende Fehlermeldung ausgeben.</p>
+<p>Sollte es keinen Fehler geben, wird die molare Masse des Stoffes in g/mol ausgegeben und kann mit dem Button „Kopieren“ in die Zwischenablage kopiert werden.</p>
+<br>
+<h2>Einheitenumrechnung</h2>
+
+<p>Diese Funktion des Programmes / der Website ermöglicht es, Werte mit für Chemie wichtigen Einheiten in andere Einheiten umzurechnen. Bei dem obersten Auswahlfeld wird die Einheiten-Kategorie ausgewählt. In das Auswahlfeld rechts neben dem Eingabefeld, in das der umzurechnende Wert eingegeben wird, wird die Ausgangseinheit des Wertes ausgewählt. Im untersten Auswahlfeld wird die gewünschte Ausgabeeinheit ausgewählt.</p>
+<p><img src="assets/images/help/del/7.PNG"></p>
+<p>Sollte ein Fehler auftreten so, wird das Programm / die Website eine hinweisende Fehlermeldung ausgeben.</p>
+<p>Sollte es keinen Fehler geben, wird der umgerechnete Wert automatisch ohne das Drücken eines Buttons ausgegeben und kann mit dem Button „Kopieren“ in die Zwischenablage kopiert werden.</p>
+`,
     privacyComplete: `<h1>Datenschutzerklärung</h1>
   <h2>Einleitung</h2>
   <p>
@@ -889,6 +1031,144 @@ export let LANGDATA = {
     privacy: "Privacy",
     impress: "Imprint",
     copy: "Copy",
+    webHelp: `
+    <h2>Reaction Balancer</h2>The formula of the reaction to be balanced is entered or copied into the input field.
+    <br>
+    <br>
+    <img src="assets/images/help/web/2.PNG"> <br><br>
+    The following applies:
+    <ul>
+<li>all substances (educts and products) must be given as total formulas.</li>
+<li>subscript numbers must be written as "normal" numbers (i.e.: H<sub>2</sub>O → H2O)</li>
+<li>The reaction arrow or the sign for the separation of the reactants and products of the reaction must be written as simple = (i.e.: 2H2 + O2 = 2H2O)
+<ul><li>o	Spaces in the equation are irrelevant and are ignored by the program / website</li></ul></li>
+<li>Brackets must not be used in the reaction equation</li>
+    </ul>
+When the reaction equation with the corresponding conditions has been entered into the input field, the balancing process is started with the "Go" button or the Enter key. <br>
+    
+    <p><img src="assets/images/help/web/2.PNG"></p><p>If one of the above instructions has not been followed or another error occurs, the program / website will issue a warning error message. </p>
+<p>If there is no error, the balanced reaction equation is output and can be copied to the clipboard by clicking the "Copy" button.</p>
+</br>
+    <h2>List of elements</h2>
+This list contains all elements already known (as of June 2020), their names, symbols and some important values. The following must be observed:
+  
+<ul>
+<li>The unit of density for the different elements depends on the state of aggregation at 20°C (last column of the table)
+<ul><li>The density for substances with the aggregate state "solid" at 20°C is given in the unit g/cm<sup>3</sup></li>
+<li>The density for the substances with the aggregate state "liquid" and "gaseous" at 20°C is given in the unit g/l</li></ul></li>
+<li>For elements with high atomic numbers (from atomic number 95 upwards), which due to instability can only be produced in the laboratory for fractions of seconds in very small quantities, many values are missing, because they could never be determined
+<ul><li>Most existing values of elements with high atomic numbers are calculated or theoretically assumed values</li></ul></li>
+<li>Values like the molar mass from the table are also used in other parts of the website / program</li>
+
+
+</ul>
+
+<p>Most values, if available, were taken from the app / website of Merck KGaA, Darmstadt, Germany. Further values were taken from the Wikipedia articles of the respective elements or from the website chemie.de.
+</p>
+<p>
+Although a long time has been spent on the accuracy of the values in the table, minor inaccuracies may still exist. 
+</p>
+<p>
+If you notice an inaccuracy or an incorrect value, please contact <a href="mailto:chemistryutility@gmail.com">chemistryutility@gmail.com</a> so that the error can be corrected. Thank you very much.
+</p> </br>
+<h2>Stoichiometry</h2>
+<p>The stoichiometry on the website / in the program is based on the basic equation  M=m/n The following applies:</p>
+<ul>
+<li>In the fields "Substance 1" and "Substance 2" the sum formulas of the substances used must be entered
+<ul><li>The program / website automatically calculates the molar mass of the substance using values from the table</li></ul></li>
+<li>All fields, except for one mass/substance quantity field, must be filled in so that the program / website can solve the equation</li> 
+<li>Brackets must not be used</li>
+</ul><p><img src="assets/images/help/web/3.PNG"></p>
+<p>The calculation is started with the "Go" button. If one of the above instructions has not been observed or another error occurs, the program / website will issue a warning error message.</p>
+<p>If there is no error, the previously left blank field is filled with the calculated value.</p>
+<p>Units do not play a role in the calculation because they are put out in the same unit as they were entered. (For example: 2 quantities of substance are entered, naturally in mol, and a mass in g. As mol1 is shortened with mol2 in the calculation, only the unit of mass, in this case g, remains).</p>
+<br>
+<h2>Molar mass</h2>
+<p>The molar mass function of the program / website uses the molar masses of the individual substances from the table and adds them up. The substance with the molar mass to be calculated is entered/copied into the input field. The following applies:</p>
+<ul>
+<li>The substance must be specified as a molecular formula</li>
+<li>Subscript numbers must be written as "normal" numbers (i.e.: H<sub>2</sub>O → H2O)</li>
+<li>Brackets must not be used</li>
+
+</ul><p><img src="assets/images/help/web/6.PNG"></p>
+<p>With the button "Go" the calculation of the molar mass is started. If one of the above instructions has not been observed or another error occurs, the program / website will issue a warning error message.</p>
+<p>If there is no error, the molar mass of the substance is output in g/mol and can be copied to the clipboard by clicking the "Copy" button.</p>
+<br>
+<h2>Unit Conversion</h2>
+<p>This function of the program / website allows to convert values with units important for chemistry into other units. In the topmost selection field, the unit category is selected. In the selection field to the right of the input field in which the value to be converted is entered, the output unit of the value is selected. The desired output unit is selected in the bottom selection field.</p>
+<p><img src="assets/images/help/web/8.PNG"></p>
+<p>If an error occurs, the program / website will display a warning error message.</p>
+<p>If there is no error, the converted value is automatically output without pressing a button and can be copied to the clipboard by pressing the "Copy" button.</p>
+`,
+    delHelp: `
+    <h2>Reaction Balancer</h2>The formula of the reaction to be balanced is entered or copied into the input field.
+    <br>
+    <br>
+    <img src="assets/images/help/del/2.PNG"> <br><br>
+    The following applies:
+    <ul>
+<li>all substances (educts and products) must be given as total formulas.</li>
+<li>subscript numbers must be written as "normal" numbers (i.e.: H<sub>2</sub>O → H2O)</li>
+<li>The reaction arrow or the sign for the separation of the reactants and products of the reaction must be written as simple = (i.e.: 2H2 + O2 = 2H2O)
+<ul><li>o	Spaces in the equation are irrelevant and are ignored by the program / website</li></ul></li>
+<li>Brackets must not be used in the reaction equation</li>
+    </ul>
+When the reaction equation with the corresponding conditions has been entered into the input field, the balancing process is started with the "Go" button or the Enter key. <br>
+    
+    <p><img src="assets/images/help/del/2.PNG"></p><p>If one of the above instructions has not been followed or another error occurs, the program / website will issue a warning error message. </p>
+<p>If there is no error, the balanced reaction equation is output and can be copied to the clipboard by clicking the "Copy" button.</p>
+</br>
+    <h2>List of elements</h2>
+This list contains all elements already known (as of June 2020), their names, symbols and some important values. The following must be observed:
+  
+<ul>
+<li>The unit of density for the different elements depends on the state of aggregation at 20°C (last column of the table)
+<ul><li>The density for substances with the aggregate state "solid" at 20°C is given in the unit g/cm<sup>3</sup></li>
+<li>The density for the substances with the aggregate state "liquid" and "gaseous" at 20°C is given in the unit g/l</li></ul></li>
+<li>For elements with high atomic numbers (from atomic number 95 upwards), which due to instability can only be produced in the laboratory for fractions of seconds in very small quantities, many values are missing, because they could never be determined
+<ul><li>Most existing values of elements with high atomic numbers are calculated or theoretically assumed values</li></ul></li>
+<li>Values like the molar mass from the table are also used in other parts of the website / program</li>
+
+
+</ul>
+
+<p>Most values, if available, were taken from the app / website of Merck KGaA, Darmstadt, Germany. Further values were taken from the Wikipedia articles of the respective elements or from the website chemie.de.
+</p>
+<p>
+Although a long time has been spent on the accuracy of the values in the table, minor inaccuracies may still exist. 
+</p>
+<p>
+If you notice an inaccuracy or an incorrect value, please contact <a href="mailto:chemistryutility@gmail.com">chemistryutility@gmail.com</a> so that the error can be corrected. Thank you very much.
+</p> </br>
+<h2>Stoichiometry</h2>
+<p>The stoichiometry on the website / in the program is based on the basic equation  M=m/n The following applies:</p>
+<ul>
+<li>In the fields "Substance 1" and "Substance 2" the sum formulas of the substances used must be entered
+<ul><li>The program / website automatically calculates the molar mass of the substance using values from the table</li></ul></li>
+<li>All fields, except for one mass/substance quantity field, must be filled in so that the program / website can solve the equation</li> 
+<li>Brackets must not be used</li>
+</ul><p><img src="assets/images/help/del/3.PNG"></p>
+<p>The calculation is started with the "Go" button. If one of the above instructions has not been observed or another error occurs, the program / website will issue a warning error message.</p>
+<p>If there is no error, the previously left blank field is filled with the calculated value.</p>
+<p>Units do not play a role in the calculation because they are put out in the same unit as they were entered. (For example: 2 quantities of substance are entered, naturally in mol, and a mass in g. As mol1 is shortened with mol2 in the calculation, only the unit of mass, in this case g, remains).</p>
+<br>
+<h2>Molar mass</h2>
+<p>The molar mass function of the program / website uses the molar masses of the individual substances from the table and adds them up. The substance with the molar mass to be calculated is entered/copied into the input field. The following applies:</p>
+<ul>
+<li>The substance must be specified as a molecular formula</li>
+<li>Subscript numbers must be written as "normal" numbers (i.e.: H<sub>2</sub>O → H2O)</li>
+<li>Brackets must not be used</li>
+
+</ul><p><img src="assets/images/help/del/6.PNG"></p>
+<p>With the button "Go" the calculation of the molar mass is started. If one of the above instructions has not been observed or another error occurs, the program / website will issue a warning error message.</p>
+<p>If there is no error, the molar mass of the substance is output in g/mol and can be copied to the clipboard by clicking the "Copy" button.</p>
+<br>
+<h2>Unit Conversion</h2>
+<p>This function of the program / website allows to convert values with units important for chemistry into other units. In the topmost selection field, the unit category is selected. In the selection field to the right of the input field in which the value to be converted is entered, the output unit of the value is selected. The desired output unit is selected in the bottom selection field.</p>
+<p><img src="assets/images/help/del/8.PNG"></p>
+<p>If an error occurs, the program / website will display a warning error message.</p>
+<p>If there is no error, the converted value is automatically output without pressing a button and can be copied to the clipboard by pressing the "Copy" button.</p>
+`,
     privacyComplete: `<h1> Privacy Policy </h1>
   <h2> Introduction </h2>
   <p>

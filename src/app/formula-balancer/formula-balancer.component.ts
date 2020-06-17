@@ -436,6 +436,17 @@ export class FormulaBalancerComponent implements OnInit {
   }
 
   copyResultToClipboard() {
+    this.getRandomMeme();
+    if (this.resultspan == undefined) {
+      if (this.language == "de") {
+        this.errortitle = "Fehler";
+        this.error = "Die Eingabe ist leer.";
+      } else {
+        this.errortitle = "Error";
+        this.error = "The input field can't be empty.";
+      }
+      return;
+    }
     this.hiddeninput.nativeElement.value = this.resultspan.nativeElement.innerText;
     console.log(this.resultspan.nativeElement.innerText);
     this.hiddeninput.nativeElement.select();

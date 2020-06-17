@@ -95,39 +95,50 @@
 
   <br />
   <h1>{{ langData.settings }}</h1>
-  {{ langData.language }}
-  <select
-    [(ngModel)]="language"
-    (ngModelChange)="langChange()"
-    [ngClass]="theme"
-    name="language"
-    id="language"
-  >
-    <option value="en">English</option>
-    <option value="de">Deutsch</option>
-  </select>
-  <br /><br />
-  {{ langData.theme }}
-  <select
-    [(ngModel)]="theme"
-    (ngModelChange)="darkModeChange()"
-    [ngClass]="theme"
-    name="darkMode"
-    id="darkMode"
-  >
-    <optgroup label="{{ langData.dark }}"
-      ><option value="dark"> {{ langData.dark }} </option>
-      <option value="blue"> {{ langData.blue }} </option
-      ><option value="green">{{ langData.green }}</option>
-      <option value="black">{{ langData.black }}</option>
-      <option value="space">{{ langData.space }}</option></optgroup
-    ><optgroup label="{{ langData.light }}">
-      <option value="light">{{ langData.light }}</option>
-      <option value="bisque">{{ langData.bisque }}</option>
-      <option value="red">{{ langData.red }}</option></optgroup
-    >
-  </select>
-  <br /><br />
+  <table>
+    <tr>
+      <td>
+        {{ langData.language }}
+      </td>
+      <td>
+        <select
+          [(ngModel)]="language"
+          (ngModelChange)="langChange()"
+          [ngClass]="theme"
+          name="language"
+          id="language"
+        >
+          <option value="en">English</option>
+          <option value="de">Deutsch</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>{{ langData.theme }}</td>
+      <td>
+        <select
+          [(ngModel)]="theme"
+          (ngModelChange)="darkModeChange()"
+          [ngClass]="theme"
+          name="darkMode"
+          id="darkMode"
+        >
+          <optgroup label="{{ langData.dark }}">
+            <option value="dark"> {{ langData.dark }} </option>
+            <option value="blue"> {{ langData.blue }} </option>
+            <option value="green">{{ langData.green }}</option>
+            <option value="black">{{ langData.black }}</option>
+            <option value="space">{{ langData.space }}</option>
+          </optgroup>
+          <optgroup label="{{ langData.light }}">
+            <option value="light">{{ langData.light }}</option>
+            <option value="bisque">{{ langData.bisque }}</option>
+            <option value="red">{{ langData.red }}</option>
+          </optgroup>
+        </select>
+      </td>
+    </tr>
+  </table>
   <h1>{{ langData.help }}</h1>
 
   <button routerLink="../webhelp/" [ngClass]="theme" style="width: 150px;">

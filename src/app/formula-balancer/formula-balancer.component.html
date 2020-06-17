@@ -1,4 +1,4 @@
-<main (keydown.esc)="removeError()">
+<main (keydown.esc)="removeError()" (keydown.enter)="startButtonClick()">
   <h1>{{ langData.formulaBalancer }}</h1>
   <p>
     <i>
@@ -19,14 +19,14 @@
   <button [ngClass]="theme" id="button" (click)="startButtonClick()">
     {{ langData.go }}
   </button>
-  <button
+  <!-- <button
     [ngClass]="theme"
     (click)="showDebug = !showDebug"
     style="width: 100px; position: absolute; bottom: 0; right: 0;"
   >
     <span *ngIf="showDebug">Hide</span
     ><span *ngIf="!showDebug">Show</span> Debug
-  </button>
+  </button>-->
   <br /><br />
   <span #resultspan *ngIf="balancedFormula != null">
     <span *ngFor="let item of balancedFormula.reactants"

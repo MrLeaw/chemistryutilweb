@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
 import { LANGDATA } from "../langdata";
 import { SharedDataService } from "../shared-data.service";
 
@@ -14,6 +14,7 @@ export class WebhelpComponent implements OnInit {
   theme = "dark";
   constructor(private sharedDataService: SharedDataService) {}
 
+  @ViewChild("webhelp", null) webhelp: ElementRef;
   ngOnInit() {
     this.language = this.sharedDataService.getLanguage();
     this.theme = this.sharedDataService.getTheme();
@@ -21,5 +22,6 @@ export class WebhelpComponent implements OnInit {
     this.mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
       navigator.userAgent
     );
+    this.webhelp.nativeElement.innerHTML = this.langData.webHelp;
   }
 }

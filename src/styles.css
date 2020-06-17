@@ -13,7 +13,7 @@
   --bg-main-secondary: #30303f;
   --accent-color: #df49a6;
   --transition-speed: 600ms;
-  --bg-green: #5cdb95;
+  --bg-green: #06450f;
   --bg-red: #fc4445;
 }
 
@@ -53,7 +53,7 @@ body.black {
 
 body.blue {
   color: var(--text-secondary);
-  background-color: #3333cc;
+  background-color: #1f456b;
 }
 
 main {
@@ -85,10 +85,10 @@ body.black::-webkit-scrollbar-track {
   background-color: #000;
 }
 body.blue::-webkit-scrollbar-track {
-  background-color: #2828a1;
+  background-color: #1d3d5e;
 }
 body.green::-webkit-scrollbar-track {
-  background-color: #4ab178;
+  background-color: #0b791c;
 }
 body::-webkit-scrollbar-thumb {
   background-color: var(--accent-color);
@@ -130,12 +130,12 @@ body.red::-webkit-scrollbar-thumb {
   box-shadow: 10px 0 10px rgba(0, 0, 0, 0.3);
 }
 .navbar.blue {
-  background-color: #3333cc;
-  box-shadow: 10px 0 10px rgba(31, 31, 184, 0.3);
+  background-color: #1f456b;
+  box-shadow: 10px 0 10px rgb(11, 49, 87, 0.3);
 }
 .navbar.green {
   background-color: var(--bg-green);
-  box-shadow: 10px 0 10px rgba(72, 199, 129, 0.3);
+  box-shadow: 10px 0 10px rgba(26, 89, 35, 0.3);
 }
 
 .navbar-nav {
@@ -210,13 +210,12 @@ body.red::-webkit-scrollbar-thumb {
 }
 .nav-link.green:hover {
   background: var(--bg-green);
-  box-shadow: 10px 10px 10px rgba(72, 199, 129, 0.3),
-    -5px -5px 10px rgba(112, 239, 169, 0.3);
+  box-shadow: 10px 10px 10px rgba(0, 49, 0, 0.3),
+    -5px -5px 10px rgba(26, 89, 35, 0.3);
 }
 .nav-link.blue:hover {
-  background: #3333cc;
-  box-shadow: 10px 0 10px rgba(31, 31, 184, 0.3),
-    -5px -5px 10px rgba(71, 71, 224, 0.7);
+  background: #1f456b;
+  box-shadow: 10px 0 10px rgb(11, 49, 87), -5px -5px 10px rgb(51, 89, 127);
 }
 
 .link-text {
@@ -327,8 +326,10 @@ body.red .fa-secondary {
 
 input {
   padding: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
   font-family: "Oxanium", sans-serif;
-  border: none;
+  border: 2px solid #b6b6b6;
   box-shadow: 10px 10px 10px rgba(23, 23, 36, 0.3),
     -5px -5px 10px rgba(53, 53, 76, 0.3);
   border-radius: 5px;
@@ -342,13 +343,13 @@ input {
 
 input.black {
   background-color: #050505;
-  box-shadow: -3px -3px 10px rgba(25, 25, 25, 0.5),
-    10px 10px 10px rgba(25, 25, 25, 0.3);
+  box-shadow: -3px -3px 10px rgba(25, 25, 25, 0.7),
+    10px 10px 10px rgba(25, 25, 25, 0.7);
 }
 input.space {
   background-color: #111118;
-  box-shadow: 10px 0 10px rgba(0, 0, 4, 0.3),
-    -5px -5px 10px rgba(37, 37, 44, 0.3);
+  box-shadow: 10px 0 10px rgba(0, 0, 4, 0.7),
+    -5px -5px 10px rgba(37, 37, 44, 0.7);
 }
 
 input.red {
@@ -367,8 +368,8 @@ input.bisque {
 
 input.green {
   background: var(--bg-green);
-  box-shadow: 10px 10px 10px rgba(72, 199, 129, 0.3),
-    -5px -5px 10px rgba(112, 239, 169, 0.3);
+  box-shadow: 10px 10px 10px rgba(0, 49, 0, 0.7),
+    -5px -5px 10px rgba(26, 89, 35, 0.7);
 }
 
 input.light {
@@ -379,9 +380,9 @@ input.light {
 }
 
 input.blue {
-  background: #3333cc;
-  box-shadow: 10px 0 10px rgba(31, 31, 184, 0.3),
-    -3px -3px 10px rgba(71, 71, 224, 0.5);
+  background: #1f456b;
+  box-shadow: 10px 0 10px rgba(11, 49, 87, 0.7),
+    -5px -5px 10px rgba(51, 89, 127, 0.7);
 }
 
 input:focus {
@@ -397,24 +398,24 @@ input.light:focus {
     -3px -3px 10px rgba(221, 222, 235, 0.5), 0 0 5px rgba(201, 202, 211, 0.5);
 }
 input.black:focus {
-  box-shadow: -3px -3px 10px rgba(25, 25, 25, 0.5),
-    10px 10px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: -3px -3px 10px rgba(25, 25, 25, 1),
+    10px 10px 10px rgba(0, 0, 0, 1);
 }
 input.blue:focus {
-  box-shadow: 10px 0 10px rgba(31, 31, 184, 0.3),
-    -3px -3px 10px rgba(71, 71, 224, 0.5), 0 0 5px rgba(71, 71, 224, 0.5);
+  box-shadow: 10px 0 10px rgba(11, 49, 87, 1),
+    -5px -5px 10px rgba(51, 89, 127, 1);
 }
 input.green:focus {
-  box-shadow: 10px 10px 10px rgba(72, 199, 129, 0.3),
-    -5px -5px 10px rgba(112, 239, 169, 0.3), 0 0 5px rgba(112, 239, 169, 0.3);
+  box-shadow: 10px 10px 10px rgba(0, 49, 0, 1),
+    -5px -5px 10px rgba(26, 89, 35, 1);
 }
 input.red:focus {
   box-shadow: 10px 0 10px rgba(232, 48, 49, 0.3),
     -5px -5px 10px rgba(255, 88, 89, 0.3), 0 0 5px rgba(255, 88, 89, 0.3);
 }
 input.space:focus {
-  box-shadow: 10px 0 10px rgba(0, 0, 4, 0.3),
-    -5px -5px 10px rgba(37, 37, 44, 0.3), 0 0 5px rgba(37, 37, 44, 0.3);
+  box-shadow: 10px 0 10px rgba(0, 0, 4, 1), -5px -5px 10px rgba(37, 37, 44, 1),
+    0 0 5px rgba(37, 37, 44, 1);
 }
 button {
   border-radius: 5px;
@@ -422,7 +423,7 @@ button {
   padding-top: 3px;
   padding-left: 10px;
   padding-right: 10px;
-  border: none;
+  border: 2px solid #b6b6b6;
   box-shadow: 10px 10px 10px rgba(23, 23, 36, 0.3),
     -5px -5px 10px rgba(53, 53, 76, 0.3);
   height: 30px;
@@ -443,8 +444,8 @@ button.red {
 }
 button.space {
   background-color: #111118;
-  box-shadow: 10px 0 10px rgba(0, 0, 4, 0.3),
-    -5px -5px 10px rgba(37, 37, 44, 0.3);
+  box-shadow: 10px 0 10px rgba(0, 0, 4, 0.7),
+    -5px -5px 10px rgba(37, 37, 44, 0.7);
 }
 button.bisque {
   background-color: #ffe4c4;
@@ -455,20 +456,20 @@ button.bisque {
 
 button.black {
   background-color: #050505;
-  box-shadow: -3px -3px 10px rgba(25, 25, 25, 0.5),
-    10px 10px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: -3px -3px 10px rgba(25, 25, 25, 0.7),
+    10px 10px 10px rgba(0, 0, 0, 0.7);
 }
 
 button.blue {
-  background: #3333cc;
-  box-shadow: 10px 0 10px rgba(31, 31, 184, 0.3),
-    -3px -3px 10px rgba(71, 71, 224, 0.5);
+  background: #1f456b;
+  box-shadow: 10px 0 10px rgba(11, 49, 87, 0.7),
+    -5px -5px 10px rgba(51, 89, 127, 0.7);
 }
 
 button.green {
   background: var(--bg-green);
-  box-shadow: 10px 10px 10px rgba(72, 199, 129, 0.3),
-    -5px -5px 10px rgba(112, 239, 169, 0.3);
+  box-shadow: 10px 10px 10px rgba(0, 49, 0, 0.7),
+    -5px -5px 10px rgba(26, 89, 35, 0.7);
 }
 
 button.light {
@@ -494,20 +495,20 @@ button.bisque:hover {
     -3px -3px 10px rgba(255, 248, 216, 0.5), 0 0 5px rgba(255, 255, 236, 0.5);
 }
 button.space:hover {
-  box-shadow: 10px 0 10px rgba(0, 0, 4, 0.3),
-    -5px -5px 10px rgba(37, 37, 44, 0.3), 0 0 5px rgba(37, 37, 44, 0.3);
+  box-shadow: 10px 0 10px rgba(0, 0, 4, 1), -5px -5px 10px rgba(37, 37, 44, 1),
+    0 0 5px rgba(37, 37, 44, 1);
 }
 button.light:hover {
   box-shadow: 10px 10px 10px rgba(201, 202, 211, 0.3),
     -3px -3px 10px rgba(221, 222, 235, 0.5), 0 0 5px rgba(201, 202, 211, 0.5);
 }
 button.black:hover {
-  box-shadow: -3px -3px 10px rgba(25, 25, 25, 0.5),
-    10px 10px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: -3px -3px 10px rgba(25, 25, 25, 1),
+    10px 10px 10px rgba(0, 0, 0, 1);
 }
 button.green:hover {
-  box-shadow: 10px 10px 10px rgba(72, 199, 129, 0.3),
-    -5px -5px 10px rgba(112, 239, 169, 0.3), 0 0 5px rgba(112, 239, 169, 0.3);
+  box-shadow: 10px 10px 10px rgba(0, 49, 0, 1),
+    -5px -5px 10px rgba(26, 89, 35, 1);
 }
 button.red:hover {
   box-shadow: 10px 0 10px rgba(232, 48, 49, 0.3),
@@ -515,9 +516,7 @@ button.red:hover {
 }
 
 button.blue:hover {
-  background: #3333cc;
-  box-shadow: 10px 0 10px rgba(31, 31, 184, 0.3),
-    -3px -3px 10px rgba(71, 71, 224, 0.5), 0 0 10px rgba(71, 71, 224, 0.5);
+  box-shadow: 10px 0 10px rgb(11, 49, 87), -5px -5px 10px rgb(51, 89, 127);
 }
 
 input.bisque::placeholder {
@@ -597,7 +596,7 @@ body.red .gry {
   background-color: var(--bg-green);
 }
 .alert.blue {
-  background: #3333cc;
+  background: #1f456b;
 }
 .alert.red {
   background-color: var(--bg-red);
@@ -647,7 +646,7 @@ body.red .gry {
 select {
   padding: 3px;
   font-family: "Oxanium", sans-serif;
-  border: none;
+  border: 2px solid #b6b6b6;
   box-shadow: 10px 10px 10px rgba(23, 23, 36, 0.3),
     -5px -5px 10px rgba(53, 53, 76, 0.3);
   border-radius: 5px;
@@ -665,8 +664,8 @@ select.black {
 }
 select.space {
   background-color: #111118;
-  box-shadow: 10px 0 10px rgba(0, 0, 4, 0.3),
-    -5px -5px 10px rgba(37, 37, 44, 0.3);
+  box-shadow: 10px 0 10px rgba(0, 0, 4, 0.7),
+    -5px -5px 10px rgba(37, 37, 44, 0.7);
 }
 select.red {
   color: var(--bg-main);
@@ -675,14 +674,14 @@ select.red {
     -5px -5px 10px rgba(255, 88, 89, 0.3);
 }
 select.blue {
-  background: #3333cc;
-  box-shadow: 10px 0 10px rgba(31, 31, 184, 0.3),
-    -3px -3px 10px rgba(71, 71, 224, 0.5);
+  background: #1f456b;
+  box-shadow: 10px 0 10px rgba(11, 49, 87, 0.7),
+    -5px -5px 10px rgba(51, 89, 127, 0.7);
 }
 select.green {
   background-color: var(--bg-green);
-  box-shadow: 10px 10px 10px rgba(72, 199, 129, 0.3),
-    -5px -5px 10px rgba(112, 239, 169, 0.3);
+  box-shadow: 10px 10px 10px rgba(0, 49, 0, 0.7),
+    -5px -5px 10px rgba(26, 89, 35, 0.7);
 }
 select.bisque {
   background-color: #ffe4c4;
@@ -699,12 +698,11 @@ select.light {
 }
 
 select.blue:focus {
-  box-shadow: 10px 0 10px rgba(31, 31, 184, 0.3),
-    -3px -3px 10px rgba(71, 71, 224, 0.5), 0 0 5px rgba(71, 71, 224, 0.5);
+  box-shadow: 10px 0 10px rgb(11, 49, 87), -5px -5px 10px rgb(51, 89, 127);
 }
 select.green:focus {
-  box-shadow: 10px 10px 10px rgba(72, 199, 129, 0.3),
-    -5px -5px 10px rgba(112, 239, 169, 0.3), 0 0 5px rgba(112, 239, 169, 0.3);
+  box-shadow: 10px 10px 10px rgba(0, 49, 0, 1),
+    -5px -5px 10px rgba(26, 89, 35, 1);
 }
 select.red:focus {
   box-shadow: 10px 0 10px rgba(232, 48, 49, 0.3),
@@ -717,10 +715,10 @@ select.space:focus {
 
 .planet {
   position: fixed;
-  height: 400px;
+  height: 40%;
   z-index: -1;
-  left: 900px;
-  top: 450px;
+  left: 38%;
+  top: 30%;
 }
 
 html,
