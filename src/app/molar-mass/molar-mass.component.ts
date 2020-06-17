@@ -13,6 +13,7 @@ export class MolarMassComponent implements OnInit {
   constructor(private sharedDataService: SharedDataService) {}
 
   language: string;
+  imgsrc: string;
   langData = null;
   theme: string;
 
@@ -20,6 +21,7 @@ export class MolarMassComponent implements OnInit {
     this.language = this.sharedDataService.getLanguage();
     this.theme = this.sharedDataService.getTheme();
     this.langData = LANGDATA[this.language];
+    this.getRandomMeme();
   }
 
   charIsLetter(casetocheck: Case, char: string): boolean {
@@ -185,16 +187,32 @@ export class MolarMassComponent implements OnInit {
             this.errortitle = "Fehler";
           } else {
             this.errortitle = "Error";
-            this.error = "The molecule contains an unknown element.";
+            this.error = "Molecule contains unknown element.";
           }
-          return;
           return -1;
         }
       }
     }
     return result;
   }
-
+  getRandomMeme() {
+    var type = Math.floor(Math.random() * 2);
+    switch (type) {
+      case 0: {
+        this.imgsrc =
+          "/assets/images/memes/gif" +
+          Math.floor(Math.random() * 6 + 1) +
+          ".gif";
+        break;
+      }
+      case 1: {
+        this.imgsrc =
+          "/assets/images/memes/jpg" +
+          Math.floor(Math.random() * 28 + 1) +
+          ".JPG";
+      }
+    }
+  }
   outputMolarMass(value: string) {
     if (value == undefined || value == null || value == "") {
       if (this.language == "de") {
@@ -215,6 +233,7 @@ export class MolarMassComponent implements OnInit {
   data = DATA;
   input: string;
   startButtonClick() {
+    this.getRandomMeme();
     this.outputMolarMass(this.input);
   }
 

@@ -1,4 +1,4 @@
-<main>
+<main (keydown.esc)="removeError()">
   <h1>{{ langData.stoichiometry }}</h1>
   <p>
     <i>
@@ -68,7 +68,7 @@
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 576 512"
         class="svg-inline--fa fa-exclamation-triangle fa-w-18"
-        style="--fa-secondary-opacity:0.1;"
+        style="--fa-secondary-opacity: 0.1;"
       >
         <g class="fa-group">
           <path
@@ -84,7 +84,7 @@
         </g>
       </svg>
     </div>
-    <div class="right">
+    <div class="center">
       <h1>
         {{ errortitle }}
       </h1>
@@ -92,6 +92,10 @@
       {{ error }}
       <br /><br />
       <button (click)="removeError()" [ngClass]="theme">Okay</button>
+    </div>
+    <div class="break"></div>
+    <div class="bottom">
+      <img width="350px" [attr.src]="imgsrc" alt="" />
     </div>
   </div>
 </main>

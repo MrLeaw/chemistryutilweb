@@ -15,6 +15,7 @@ export class StoichiometryComponent implements OnInit {
 
   data = DATA;
   substance1: string;
+  imgsrc: string;
   substance2: string;
   mass1: string;
   mass2: string;
@@ -27,6 +28,26 @@ export class StoichiometryComponent implements OnInit {
     this.language = this.sharedDataService.getLanguage();
     this.theme = this.sharedDataService.getTheme();
     this.langData = LANGDATA[this.language];
+    this.getRandomMeme();
+  }
+
+  getRandomMeme() {
+    var type = Math.floor(Math.random() * 2);
+    switch (type) {
+      case 0: {
+        this.imgsrc =
+          "/assets/images/memes/gif" +
+          Math.floor(Math.random() * 6 + 1) +
+          ".gif";
+        break;
+      }
+      case 1: {
+        this.imgsrc =
+          "/assets/images/memes/jpg" +
+          Math.floor(Math.random() * 28 + 1) +
+          ".JPG";
+      }
+    }
   }
 
   charIsLetter(casetocheck: Case, char: string): boolean {
@@ -234,12 +255,7 @@ export class StoichiometryComponent implements OnInit {
   errortitle: string = null;
 
   startButtonClick() {
-    console.log("Substance1: " + this.substance1);
-    console.log("Substance2: " + this.substance2);
-    console.log("Mass1: " + this.mass1);
-    console.log("Mass2: " + this.mass2);
-    console.log("Amount1: " + this.amount1);
-    console.log("Amount2: " + this.amount2);
+    this.getRandomMeme();
     let emptyField: StochiometrieField = null;
     let errorcode = "none";
     if (this.substance1 == "" || this.substance1 == undefined) {
@@ -286,7 +302,7 @@ export class StoichiometryComponent implements OnInit {
         this.error = "Es muss genau ein leeres Feld geben.";
       } else {
         this.errortitle = "Error";
-        this.error = "There must be exactly one empty field.";
+        this.error = "There must be one empty field.";
       }
       return;
     }
@@ -313,7 +329,7 @@ export class StoichiometryComponent implements OnInit {
           this.error = "Beide Stoff-Eingabefelder müssen ausgefüllt sein.";
         } else {
           this.errortitle = "Error";
-          this.error = "Both substance input fields must be filled out.";
+          this.error = "Empty substance field detected.";
         }
         return;
       }

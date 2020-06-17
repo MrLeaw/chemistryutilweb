@@ -1,7 +1,9 @@
-import { Component, OnInit, NgModule } from "@angular/core";
+import { Component, OnInit, NgModule, Inject } from "@angular/core";
 import { SharedDataService } from "./shared-data.service";
+import { filter } from "rxjs/operators";
 import { LANGDATA } from "./langdata";
-
+import { Router, NavigationEnd, RouterEvent } from "@angular/router";
+import { DOCUMENT } from "@angular/common";
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
@@ -11,6 +13,7 @@ export class AppComponent implements OnInit {
   langData = LANGDATA.en;
   language: string;
   theme: string;
+  bgSrc: string;
   title = "Chemie Utility";
   myStyle: object = {};
   myParams: object = {};
@@ -18,7 +21,11 @@ export class AppComponent implements OnInit {
   width: number = 100;
   height: number = 100;
 
-  constructor(private sharedDataService: SharedDataService) {}
+  constructor(
+    private sharedDataService: SharedDataService,
+    private router: Router,
+    @Inject(DOCUMENT) private document: Document
+  ) {}
   ngOnInit() {
     let planets = ["mars", "saturn", "jupiter"];
     let rand = Math.floor(Math.random() * planets.length);
@@ -158,5 +165,18 @@ export class AppComponent implements OnInit {
         this.langData = LANGDATA[this.language];
       }
     });
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe((event) => {
+        if (
+          (event as RouterEvent).url == "" ||
+          (event as RouterEvent).url == "/"
+        ) {
+          this.document.body.style.backgroundImage =
+            "url('assets/images/bg.jpg')";
+        } else {
+          this.document.body.style.backgroundImage = "url('')";
+        }
+      });
   }
 }

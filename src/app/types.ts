@@ -28,6 +28,7 @@ export class Molecule {
 export class ElementData {
   ordnungszahl: number;
   name: string;
+  nameen: string;
   symbol: string;
   molareMasse: number;
   nukleonenAnzahl: number;

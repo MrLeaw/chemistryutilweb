@@ -16,6 +16,8 @@ import { ParticlesModule } from "angular-particle";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { UnitsComponent } from "./units/units.component";
 import { WebhelpComponent } from './webhelp/webhelp.component';
+import { ImpressComponent } from './impress/impress.component';
+import { PrivacyComponent } from './privacy/privacy.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { WebhelpComponent } from './webhelp/webhelp.component';
     HelpComponent,
     UnitsComponent,
     WebhelpComponent,
+    ImpressComponent,
+    PrivacyComponent,
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,8 @@ import { StoichiometryComponent } from "./stoichiometry/stoichiometry.component"
 import { HelpComponent } from "./help/help.component";
 import { UnitsComponent } from "./units/units.component";
 import { WebhelpComponent } from "./webhelp/webhelp.component";
+import { PrivacyComponent } from "./privacy/privacy.component";
+import { ImpressComponent } from "./impress/impress.component";
 
 const routes: Routes = [
   { path: "formulaBalancer", component: FormulaBalancerComponent },
@@ -20,6 +22,8 @@ const routes: Routes = [
   { path: "help", component: HelpComponent },
   { path: "webhelp", component: WebhelpComponent },
   { path: "units", component: UnitsComponent },
+  { path: "privacy", component: PrivacyComponent },
+  { path: "impress", component: ImpressComponent },
 ];
 
 @NgModule({

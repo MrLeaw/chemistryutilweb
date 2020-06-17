@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ElementRef, ViewChild } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 import { Molecule, Reaction, Atom, Case, State } from "../types";
@@ -17,14 +17,20 @@ export class FormulaBalancerComponent implements OnInit {
     this.language = this.sharedDataService.getLanguage();
     this.theme = this.sharedDataService.getTheme();
     this.langData = LANGDATA[this.language];
+    this.getRandomMeme();
   }
   balancedFormula: Reaction;
   input: string = "";
   startButtonClick(): void {
+    this.getRandomMeme();
     this.outputBalancedFormula(this.input);
   }
+
+  @ViewChild("resultspan", null) resultspan: ElementRef;
+  @ViewChild("hiddeninput", null) hiddeninput: ElementRef;
   langData = null;
   language: string;
+  imgsrc: string;
   theme: string;
   error: string = null;
   errortitle: string = null;
@@ -408,6 +414,33 @@ export class FormulaBalancerComponent implements OnInit {
       }
     }
     return reactantsElements;
+  }
+
+  getRandomMeme() {
+    var type = Math.floor(Math.random() * 2);
+    switch (type) {
+      case 0: {
+        this.imgsrc =
+          "/assets/images/memes/gif" +
+          Math.floor(Math.random() * 6 + 1) +
+          ".gif";
+        break;
+      }
+      case 1: {
+        this.imgsrc =
+          "/assets/images/memes/jpg" +
+          Math.floor(Math.random() * 28 + 1) +
+          ".JPG";
+      }
+    }
+  }
+
+  copyResultToClipboard() {
+    this.hiddeninput.nativeElement.value = this.resultspan.nativeElement.innerText;
+    console.log(this.resultspan.nativeElement.innerText);
+    this.hiddeninput.nativeElement.select();
+    this.hiddeninput.nativeElement.setSelectionRange(0, 999999);
+    document.execCommand("copy");
   }
 
   outputBalancedFormula(value: string) {
