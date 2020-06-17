@@ -1104,7 +1104,7 @@ If you notice an inaccuracy or an incorrect value, please contact <a href="mailt
     <h2>Reaction Balancer</h2>The formula of the reaction to be balanced is entered or copied into the input field.
     <br>
     <br>
-    <img src="assets/images/help/del/2.PNG"> <br><br>
+    <img src="assets/images/help/del/1.PNG"> <br><br>
     The following applies:
     <ul>
 <li>all substances (educts and products) must be given as total formulas.</li>
@@ -1115,7 +1115,7 @@ If you notice an inaccuracy or an incorrect value, please contact <a href="mailt
     </ul>
 When the reaction equation with the corresponding conditions has been entered into the input field, the balancing process is started with the "Go" button or the Enter key. <br>
     
-    <p><img src="assets/images/help/del/2.PNG"></p><p>If one of the above instructions has not been followed or another error occurs, the program / website will issue a warning error message. </p>
+    <p><img src="assets/images/help/del/1.PNG"></p><p>If one of the above instructions has not been followed or another error occurs, the program / website will issue a warning error message. </p>
 <p>If there is no error, the balanced reaction equation is output and can be copied to the clipboard by clicking the "Copy" button.</p>
 </br>
     <h2>List of elements</h2>
@@ -1147,7 +1147,7 @@ If you notice an inaccuracy or an incorrect value, please contact <a href="mailt
 <ul><li>The program / website automatically calculates the molar mass of the substance using values from the table</li></ul></li>
 <li>All fields, except for one mass/substance quantity field, must be filled in so that the program / website can solve the equation</li> 
 <li>Brackets must not be used</li>
-</ul><p><img src="assets/images/help/del/3.PNG"></p>
+</ul><p><img src="assets/images/help/del/4.PNG"></p>
 <p>The calculation is started with the "Go" button. If one of the above instructions has not been observed or another error occurs, the program / website will issue a warning error message.</p>
 <p>If there is no error, the previously left blank field is filled with the calculated value.</p>
 <p>Units do not play a role in the calculation because they are put out in the same unit as they were entered. (For example: 2 quantities of substance are entered, naturally in mol, and a mass in g. As mol1 is shortened with mol2 in the calculation, only the unit of mass, in this case g, remains).</p>
@@ -1159,13 +1159,13 @@ If you notice an inaccuracy or an incorrect value, please contact <a href="mailt
 <li>Subscript numbers must be written as "normal" numbers (i.e.: H<sub>2</sub>O → H2O)</li>
 <li>Brackets must not be used</li>
 
-</ul><p><img src="assets/images/help/del/6.PNG"></p>
+</ul><p><img src="assets/images/help/del/5.PNG"></p>
 <p>With the button "Go" the calculation of the molar mass is started. If one of the above instructions has not been observed or another error occurs, the program / website will issue a warning error message.</p>
 <p>If there is no error, the molar mass of the substance is output in g/mol and can be copied to the clipboard by clicking the "Copy" button.</p>
 <br>
 <h2>Unit Conversion</h2>
 <p>This function of the program / website allows to convert values with units important for chemistry into other units. In the topmost selection field, the unit category is selected. In the selection field to the right of the input field in which the value to be converted is entered, the output unit of the value is selected. The desired output unit is selected in the bottom selection field.</p>
-<p><img src="assets/images/help/del/8.PNG"></p>
+<p><img src="assets/images/help/del/7.PNG"></p>
 <p>If an error occurs, the program / website will display a warning error message.</p>
 <p>If there is no error, the converted value is automatically output without pressing a button and can be copied to the clipboard by pressing the "Copy" button.</p>
 `,
