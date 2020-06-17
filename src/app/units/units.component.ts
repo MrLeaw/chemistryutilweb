@@ -64,8 +64,8 @@ export class UnitsComponent implements OnInit {
   }
 
   calculate() {
-    if (this.input == undefined || this.input == "" || this.input == null) {
-      this.result = "";
+    if (this.input == undefined || this.input == null) {
+      this.result = undefined;
       return;
     }
     if (this.startUnit == "" || this.endUnit == "") {
@@ -90,7 +90,7 @@ export class UnitsComponent implements OnInit {
       x = x + unit2.Add;
     }
 
-    this.result = x + "";
+    this.result = x;
   }
 
   /*
