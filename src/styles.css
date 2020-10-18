@@ -656,6 +656,7 @@ select {
   height: 30px;
   background-color: var(--bg-main);
   color: var(--text-secondary);
+  -webkit-appearance:none;
 }
 select.black {
   background-color: #050505;
