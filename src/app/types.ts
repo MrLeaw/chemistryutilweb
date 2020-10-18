@@ -23,6 +23,10 @@ export class Atom {
 export class Molecule {
   amount: number = 1;
   atoms: Atom[] = [];
+  charge: number = 0;
+  isIon(): boolean {
+    return this.charge != 0
+  }
 }
 
 export class ElementData {

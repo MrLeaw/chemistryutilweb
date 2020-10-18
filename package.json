@@ -24,6 +24,7 @@
     "@angular/pwa": "^0.900.4",
     "@angular/router": "~8.2.14",
     "@angular/service-worker": "~8.2.14",
+    "@ng-stack/contenteditable": "^1.1.1",
     "angular-particle": "^1.0.4",
     "firebase": ">= 5.5.7 <8",
     "popmotion": "^8.7.1",

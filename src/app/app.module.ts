@@ -18,6 +18,7 @@ import { UnitsComponent } from "./units/units.component";
 import { WebhelpComponent } from './webhelp/webhelp.component';
 import { ImpressComponent } from './impress/impress.component';
 import { PrivacyComponent } from './privacy/privacy.component';
+import { ContenteditableModule } from '@ng-stack/contenteditable';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { PrivacyComponent } from './privacy/privacy.component';
     AppRoutingModule,
     ParticlesModule,
     FormsModule,
+    ContenteditableModule,
     ServiceWorkerModule.register("ngsw-worker.js", {
       enabled: environment.production,
     }),

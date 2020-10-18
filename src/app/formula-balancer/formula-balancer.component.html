@@ -9,13 +9,8 @@
       {{ langData.formulaBalancerHint4 }}
     </i>
   </p>
-  <input
-    type="text"
-    id="input"
-    [(ngModel)]="input"
-    placeholder="{{ langData.enterFormulaHere }}"
-    [ngClass]="theme"
-  />
+  
+  <div contenteditable propValueAccessor="innerHTML" [ngClass]="theme" (keydown)="inputkeydown($event)" (keypress)="inputkeypress($event)" [(ngModel)]="input" id="input">Enter formula here</div>
   <button [ngClass]="theme" id="button" (click)="startButtonClick()">
     {{ langData.go }}
   </button>

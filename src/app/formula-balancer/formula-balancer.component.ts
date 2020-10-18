@@ -21,7 +21,9 @@ export class FormulaBalancerComponent implements OnInit {
   }
   balancedFormula: Reaction;
   input: string = "";
+
   startButtonClick(): void {
+    console.log(this.input);
     this.getRandomMeme();
     this.outputBalancedFormula(this.input);
   }
@@ -41,6 +43,7 @@ export class FormulaBalancerComponent implements OnInit {
   arr1 = [];
   arr2 = [];
 
+  /*
   getSubscriptString(amount: number): string {
     const subscript = ["₀", "₁", "₂", "₃", "₄", "₅", "₆", "₇", "₈", "₉"];
     let str = String(amount);
@@ -50,6 +53,7 @@ export class FormulaBalancerComponent implements OnInit {
     }
     return result;
   }
+ */
 
   charIsLetter(casetocheck: Case, char: string): boolean {
     let lowercaseLetters = [
@@ -149,6 +153,10 @@ export class FormulaBalancerComponent implements OnInit {
             state = State.AtomAmount;
           }
         }
+      }else if(value.charAt(i) == "_") {
+
+      }else if(value.charAt(i) == "^") {
+        
       } else {
         // It is not a number, probably a letter
         if (i == 0) {
@@ -195,6 +203,26 @@ export class FormulaBalancerComponent implements OnInit {
     }
     console.log(JSON.stringify(molecule));
     return molecule;
+  }
+
+  inputkeydown(e) {
+    if (e.keyCode == 220 || e.keyCode == 229) {
+      e.preventDefault()
+      document.execCommand('superscript', false)
+  }else if(e.keyCode == 38) {
+      e.preventDefault()
+      document.execCommand('superscript', false)
+  }else if(e.keyCode == 40) {
+      e.preventDefault()
+      document.execCommand('subscript', false)
+  }
+  } 
+
+  inputkeypress(e) {
+    if (e.keyCode == 95) {
+      e.preventDefault()
+      document.execCommand('subscript', false)
+  }
   }
 
   generateReaction(value: string): Reaction {
@@ -465,7 +493,13 @@ export class FormulaBalancerComponent implements OnInit {
       }
       return;
     }
-    this.balancedFormula = this.balanceFormula(value.replace(/ /g, ""));
+    value = value.replace(/ /g, "");
+    value = value.replace(/<sup>/g, "^{");
+    value = value.replace(/<\/sup>/g, "}");
+    value = value.replace(/<sub>/g, "_{");
+    value = value.replace(/<\/sub>/g, "}");
+    console.log(value);
+    this.balancedFormula = this.balanceFormula(value);
   }
   removeError() {
     this.error = null;
